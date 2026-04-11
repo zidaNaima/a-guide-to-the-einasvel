@@ -1,0 +1,32 @@
+---
+import "../global.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>A Guide to the Einasvel</title>
+	</head>
+	<body>
+		<header class="h-15 bg-yellow-300 content-center">
+			<nav>
+				<ul
+					class="flex justify-center gap-10 text-blue-900 text-lg font-semibold"
+				>
+					<li><a href="/">Home</a></li>
+					<li><a href="/society">Society</a></li>
+					<li><a href="/galaxy">Galaxy</a></li>
+					<li><a href="/language">Language</a></li>
+					<li><a href="/life">Organic Life</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
