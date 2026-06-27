@@ -1,5 +1,6 @@
 ---
 import "../global.css";
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,25 +9,67 @@ import "../global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>A Guide to the Einasvel</title>
+		<title>{title}</title>
 	</head>
-	<body>
-		<header class="h-15 bg-yellow-300 content-center">
+
+	<body class="flex flex-col min-h-screen bg-[#ecd9a3]">
+		<div id="top"></div>
+		<a href="#top" id="jump-to-top">Jump To Top</a>
+
+		<header
+			class="h-13 mb-8 bg-secondary content-center shadow-md shadow-primary/20"
+		>
 			<nav>
 				<ul
-					class="flex justify-center gap-10 text-blue-900 text-lg font-semibold"
+					class="flex justify-center gap-10 text-font-blue text-sm font-medium"
 				>
 					<li><a href="/">Home</a></li>
-					<li><a href="/society">Society</a></li>
 					<li><a href="/galaxy">Galaxy</a></li>
-					<li><a href="/language">Language</a></li>
 					<li><a href="/life">Organic Life</a></li>
+					<li><a href="/society">Society</a></li>
+					<li><a href="/language">Language</a></li>
+					<li><a href="/stories">Stories</a></li>
+					<li><a href="/about">About Me</a></li>
 				</ul>
 			</nav>
 		</header>
-		<main>
-			<slot />
+
+		<slot name="header" />
+
+		<main class="flex-1 my-8">
+			<section
+				class="bg-linear-to-b from-primary/85 to-40% to-primary rounded-[10px] pt-12.5 pb-37.5 w-[95%] m-auto max-w-335 px-6.25"
+			>
+				<slot />
+			</section>
 		</main>
+
+		<footer
+			class="bg-secondary shadow-[0_-4px_6px_-1px] shadow-primary/20 px-25 pt-16 pb-8"
+		>
+			<section class="flex justify-between text-sm mb-8 gap-12 max-w-335">
+				<div>
+					Interactive guide of the fictional Enausq'/hl/ (Einasvel)
+					species and Mk'mih'oh (Mikimoh) planet. Einasvel and
+					Enausq'/hl/ are used interchangeably throughout this site.
+					<br />
+					<br />
+					Note: This site looks best on larger screens
+				</div>
+				<div>
+					<p class="font-bold mb-2">Resources</p>
+				</div>
+				<div>
+					<p class="font-bold mb-2">References</p>
+				</div>
+				<div>
+					<p class="font-bold mb-2">Inspirations</p>
+				</div>
+			</section>
+			<p class="text-xs w-full text-center">
+				All rights reserved. Do not copy or distribute without
+				permission.
+			</p>
+		</footer>
 	</body>
 </html>
