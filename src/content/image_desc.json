@@ -1,0 +1,32 @@
+[
+    {
+        "src": "../../public/home_main.png",
+        "alt": "Main Home",
+        "tags": ["Home", "Galaxy", "Society", "Language", "Stories", "Organic Life", "About Me", "Gallery Only"]
+    },
+    {
+        "src": "../../public/ooheih.png",
+        "alt": "Main Home",
+        "tags": ["Home", ""]
+    },
+    {
+        "src": "../../public/okshlid_icon.png",
+        "alt": "Main Home",
+        "tags": ["Home", "Gaxy"]
+    },
+    {
+        "src": "../../public/idauhl.png",
+        "alt": "Main Home",
+        "tags": ["Home", "Galaxy"]
+    },
+    {
+        "src": "../../public/ooheih.png",
+        "alt": "Main Home",
+        "tags": ["Home", "Galaxy"]
+    },
+    {
+        "src": "../../public/okshlid_icon.png",
+        "alt": "Main Home",
+        "tags": ["Home", "Galaxy"]
+    }
+]

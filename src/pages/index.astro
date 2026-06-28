@@ -1,6 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import image_desc from "../content/image_desc.json";
+import TagList from "../components/TagList.tsx";
+let tags = image_desc[0].tags;
 ---
+
+<script defer define:vars={{ tags }}>
+    document.addEventListener("DOMContentLoaded", () => {
+        const card = document.querySelector("#gallery-card");
+        const images = document.querySelectorAll(".gallery-img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                card.src = img.src;
+                card.alt = img.alt;
+                tags = JSON.parse(img.dataset.tags);
+				console.log(tags);
+            });
+        });
+    });
+</script>
 
 <BaseLayout title="A Guide to the Einasvel">
 	<section
@@ -23,4 +42,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<p class="section-desc text-font">
 		Not sure where to start? Look below for a brief summary of each page!
 	</p>
+	<div class="flex flex-row gap-1">
+		<section class="flex flex-wrap gap-1">
+			{
+				image_desc.map((i) => (
+					<img
+						src={i.src}
+						alt={i.alt}
+						data-tags={JSON.stringify(i.tags)}
+						class="gallery-img size-24 object-cover cursor-pointer"
+					/>
+				))
+			}
+		</section>
+		<div class="min-w-100 w-100 bg-off-white p-3">
+			<div class="w-full aspect-square content-center">
+				<img src={image_desc[0].src} alt={image_desc[0].alt} id="gallery-card" class="max-w-full max-h-full m-auto" />
+			</div>
+				
+			<div class="flex flex-wrap gap-1" id="tags">
+				{tags.map((t: string) => <div class="bg-red-100">{t}</div>)}
+			</div>
+			<TagList client:load />
+			<p></p>
+		</div>
+	</div>
 </BaseLayout>
