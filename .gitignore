@@ -1,3 +1,5 @@
+# development
+.vscode/
 # build output
 dist/
 # generated types
