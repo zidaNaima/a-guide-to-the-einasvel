@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    color: var(--color-font-secondary);
 }
 
 @theme {
@@ -53,4 +54,8 @@ html {
 .section-desc {
     font-weight: lighter;
     margin-bottom: 20px;
+}
+
+footer a {
+    color: var(--color-link-light);
 }
