@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import formattedDate from "../scripts/last-updated.js";
+import formattedDate from "../scripts/last-updated.ts";
 ---
 
 <BaseLayout title="Galaxy | A Guide to the Einasvel" lastUpdate={formattedDate}>
@@ -11,7 +11,7 @@ import formattedDate from "../scripts/last-updated.js";
 		</p>
 	</section>
 
-	<div class="section-header text-font">
+	<div id="planet" class="section-header text-font">
 		<p>Planet</p>
 		<hr />
 	</div>

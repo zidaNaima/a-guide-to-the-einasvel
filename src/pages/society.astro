@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import formattedDate from "../scripts/last-updated.js";
+import formattedDate from "../scripts/last-updated.ts";
 import NavigationCard from "../components/NavigationCard.astro";
 import SelfExpression from "../components/society/SelfExpression.astro";
 ---
 
-<script src="../scripts/collapse-section.js"></script>
+<script src="../scripts/collapse-section.ts"></script>
 
 <BaseLayout title="Society | A Guide to the Einasvel" lastUpdate={formattedDate}>
     <section slot="header" class="w-full max-w-335 m-auto px-12">
