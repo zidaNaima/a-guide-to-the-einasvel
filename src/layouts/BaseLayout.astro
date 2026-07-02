@@ -1,6 +1,6 @@
 ---
 import "../global.css";
-const { title } = Astro.props;
+const { title, lastUpdate } = Astro.props;
 ---
 
 <html lang="en">
@@ -10,9 +10,18 @@ const { title } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 
-	<body class="flex flex-col min-h-screen bg-[#ecd9a3]">
+	<body
+		class="flex flex-col min-h-screen bg-[#ecd9a3] bg-[url('../../public/homeMain.png')]"
+	>
 		<div id="top"></div>
 		<a href="#top" id="jump-to-top">Jump To Top</a>
 
@@ -21,15 +30,39 @@ const { title } = Astro.props;
 		>
 			<nav>
 				<ul
-					class="flex justify-center gap-10 text-font-blue text-sm font-medium"
+					class="flex justify-center text-font-blue text-sm font-medium tracking-wide"
 				>
-					<li><a href="/">Home</a></li>
-					<li><a href="/galaxy">Galaxy</a></li>
-					<li><a href="/life">Organic Life</a></li>
-					<li><a href="/society">Society</a></li>
-					<li><a href="/language">Language</a></li>
-					<li><a href="/stories">Stories</a></li>
-					<li><a href="/about">About Me</a></li>
+					<li>
+						<a href="/" class="main">Home</a>
+						<ul>
+							<li><a href="/#site-summary">Site Summary</a></li>
+							<li><a href="/#gallery">Gallery</a></li>
+						</ul>
+					</li>
+					<li><a href="/galaxy" class="main">Galaxy</a></li>
+					<li><a href="/life" class="main">Organic Life</a></li>
+					<li>
+						<a href="/society" class="main">Society</a>
+						<ul>
+							<li><a href="/society#self-expression">Forms of Self Expression</a></li>
+							<div class="sub">
+								<li><a href="/society#hair">The Significance of Hair</a></li>
+								<li><a href="/society#body-language">Body Language</a></li>
+							</div>
+						</ul>
+					</li>
+					<li>
+						<a href="/language" class="main">Language</a>
+						<ul>
+							<li><a href="/language#phonology">Phonology</a></li>
+							<div class="sub">
+								<li><a href="/language#consonants">Consonants</a></li>
+								<li><a href="/language#vowels">Vowels</a></li>
+							</div>
+						</ul>
+					</li>
+					<li><a href="/stories" class="main">Stories</a></li>
+					<li><a href="/about" class="main">About Me</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -45,9 +78,11 @@ const { title } = Astro.props;
 		</main>
 
 		<footer
-			class="bg-secondary shadow-[0_-4px_6px_-1px] shadow-primary/20 px-25 pt-16 pb-8"
+			class="bg-secondary shadow-[0_-4px_6px_-1px] shadow-primary/20 px-15 md:px-25 pt-16 pb-8"
 		>
-			<section class="flex justify-between text-sm mb-8 gap-10 max-w-335">
+			<section
+				class="flex flex-col md:flex-row justify-between text-sm mb-8 gap-10 max-w-250 m-auto"
+			>
 				<div>
 					Interactive guide of the fictional Enausq'/hl/ (Einasvel)
 					species and Mk'mih'oh (Mikimoh) planet. Einasvel and
@@ -56,38 +91,45 @@ const { title } = Astro.props;
 					<br />
 					Note: This site looks best on larger screens
 				</div>
-				<div>
-					<p class="font-bold mb-2">Resources</p>
-					<a
-						href="https://www.figma.com/"
-						target="_blank"
-						rel="noopener noreferrer">Figma</a
-					>
-				</div>
-				<div>
-					<p class="font-bold mb-2">References</p>
-					<a
-						href="https://www.youtube.com/@Artifexian"
-						target="_blank"
-						rel="noopener noreferrer">Artifexian</a
-					>
-					<a
-						href="https://www.youtube.com/@Biblaridion"
-						target="_blank"
-						rel="noopener noreferrer">Biblaridion</a
-					>
-				</div>
-				<div>
-					<p class="font-bold mb-2">Inspirations</p><a
-						href="https://www.instagram.com/milesr.exobio/"
-						target="_blank"
-						rel="noopener noreferrer">Milesr.exbio</a
-					>
+
+				<div
+					class="flex flex-wrap md:flex-nowrap justify-between gap-10"
+				>
+					<div class="flex flex-col">
+						<p class="font-bold mb-2">Resources</p>
+						<a
+							href="https://www.figma.com/"
+							target="_blank"
+							rel="noopener noreferrer">Figma</a
+						>
+					</div>
+					<div class="flex flex-col">
+						<p class="font-bold mb-2">References</p>
+						<a
+							href="https://www.youtube.com/@Artifexian"
+							target="_blank"
+							rel="noopener noreferrer">Artifexian</a
+						>
+						<a
+							href="https://www.youtube.com/@Biblaridion"
+							target="_blank"
+							rel="noopener noreferrer">Biblaridion</a
+						>
+					</div>
+					<div class="flex flex-col">
+						<p class="font-bold mb-2">Inspirations</p><a
+							href="https://www.instagram.com/milesr.exobio/"
+							target="_blank"
+							rel="noopener noreferrer">Milesr.exbio</a
+						>
+					</div>
 				</div>
 			</section>
 			<p class="text-xs w-full text-center">
 				All rights reserved. Do not copy or distribute without
 				permission.
+				<br />
+				Last updated: {lastUpdate}
 			</p>
 		</footer>
 	</body>
