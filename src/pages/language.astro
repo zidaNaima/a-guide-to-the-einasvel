@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import formattedDate from "../scripts/last-updated.js";
+import NavigationCard from "../components/NavigationCard.astro";
+import Phonology from "../components/language/Phonology.astro";
+---
+
+<script src="../scripts/collapse-section.js"></script>
+
+<BaseLayout title="Language | A Guide to the Einasvel" lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Language | Naunoh/hl/oh</h1>
+        <p class="text-base">
+            Learn about the Naunoh/hl/oh language, listen to its sounds, and
+            translate your own sentences.
+        </p>
+    </section>
+
+    <div class="flex flex-row-reverse justify-between gap-15">
+        <!-- navigation card -->
+        <NavigationCard>
+            <a href="#phonology" class="font-bold"> Phonology </a>
+            <div class="leading-5 ml-4 mb-4 flex flex-col">
+                <a href="#consonants">Consonants</a>
+                <a href="#vowels">Vowels</a>
+            </div>
+        </NavigationCard>
+
+        <section class="w-full text-font underline-link link-on-dark">
+            <Phonology />
+        </section>
+    </div>
+</BaseLayout>

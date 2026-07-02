@@ -1,14 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import formattedDate from "../scripts/last-updated.js";
 ---
 
-<BaseLayout title="Galaxy | A Guide to the Einasvel">
+<BaseLayout title="Galaxy | A Guide to the Einasvel" lastUpdate={formattedDate}>
 	<section slot="header" class="w-full max-w-335 m-auto px-12">
-		<h1 class="page-title">The Galaxy</h1>
+		<h1 class="page-title">The Galaxy | Mk'mih'oh</h1>
 		<p class="text-base">
-			subtitle
+			Learn information on the climate and orbit of Mk'mih'oh.
 		</p>
 	</section>
 
-	<p class="section-header text-font">Planet</p>
+	<div class="section-header text-font">
+		<p>Planet</p>
+		<hr />
+	</div>
 </BaseLayout>

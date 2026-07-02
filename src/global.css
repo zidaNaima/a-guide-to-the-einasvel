@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 html {
+    font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
     color: var(--color-font-secondary);
@@ -13,9 +14,49 @@ html {
     --color-font: #FDF8F1;
     --color-font-secondary: #1E1E1E;
     --color-font-blue: #143C64;
+    --color-shadow: #1E1E1E;
     --color-light-gray: #F5F5F5;
+    --color-dark-gray: #BCBCBC;
     --color-link-light: #135FAF;
     --color-link-dark: #EFBD81;
+}
+
+nav .main {
+    padding: 20px;
+}
+
+nav .main:hover {
+    font-weight: bold;
+    letter-spacing: 1.25%;
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    margin-top: 15px;
+    padding: 10px 0;
+    background-color: var(--color-secondary);
+    box-shadow: 0px 4px 6px -1px rgb(from var(--color-primary) r g b / 0.3);
+    font-weight: bold;
+
+    li {
+        padding: 0 20px 2px;
+        cursor: pointer;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    .sub {
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
 }
 
 #jump-to-top {
@@ -38,24 +79,61 @@ html {
 }
 
 .page-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     margin-top: 6px;
     margin-bottom: 2px;
 }
 
 .section-header {
-    font-size: larger;
+    font-size: 20px;
     font-weight: bold;
-    border-bottom: 1px solid;
-    margin-bottom: 8px;
+    margin-bottom: 30px;
 }
 
 .section-desc {
+    font-size: medium;
     font-weight: lighter;
-    margin-bottom: 20px;
+    margin-top: 8px;
 }
 
 footer a {
     color: var(--color-link-light);
+}
+
+.underline-link a,
+.hover-underline-link a:hover {
+    text-decoration: underline;
+}
+
+.link-on-dark a {
+    color: var(--color-link-dark);
+}
+
+.link-on-light a {
+    color: var(--color-link-light);
+}
+
+.write-vertical {
+    writing-mode: sideways-lr;
+}
+
+.info-table {
+    padding: 24px;
+    background-color: var(--color-off-white);
+    color: var(--color-font-secondary);
+
+    table {
+        margin: 24px 0;
+        background-color: #fff;
+        text-align: center;
+        border: 1px solid var(--color-font-secondary);
+    }
+
+    th,
+    td {
+        padding: 8px;
+        border: 1px solid var(--color-font-secondary);
+        white-space: nowrap;
+    }
 }

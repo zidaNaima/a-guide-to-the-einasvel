@@ -1,0 +1,82 @@
+---
+import Collapse from "../Collapse.tsx";
+---
+
+<div id="phonology" class="section-header">
+    <p>Phonology</p>
+    <hr />
+</div>
+
+<section id="consonants" class="mb-4">
+    <Collapse name="Consonants" />
+
+    <div class="flex flex-col md:flex-row gap-6">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut culpa
+            ullam sed facere commodi <a href="">link to another site here</a> saepe
+            animi nisi. Corrupti, quidem excepturi.
+        </div>
+
+        <div class="info-table overflow-scroll md:overflow-visible">
+            <p class="text-lg font-bold">Naunoh/hl/oh Consonants</p>
+            <p class="text-xs font-bold">
+                Some sounds not found in the English language
+            </p>
+            <div class="text-xs underline-link link-on-light">
+                <a href="">(IPA on wikipedia)</a>
+            </div>
+            <table>
+                <colgroup>
+                    <col class="bg-dark-gray" />
+                    <col class="bg-dark-gray" />
+                    <col class="bg-dark-gray/70" />
+                </colgroup>
+                <tr class="text-sm">
+                    <th colspan="2">Place</th>
+                    <th>Manner</th>
+                    <th>Symbol</th>
+                    <th>Sound</th>
+                    <th>Word</th>
+                    <th>IPA</th>
+                    <th>Listen</th>
+                </tr>
+                <tr>
+                    <td class="write-vertical text-sm" rowspan="2">Labial</td>
+                    <td class="write-vertical text-sm" rowspan="2">Labio-dental</td>
+                    <td class="write-vertical text-sm" rowspan="2">Nasal</td>
+                    <td>(_)</td>
+                    <td>s</td>
+                    <td>sun</td>
+                    <td>s</td>
+                    <td>)))</td>
+                </tr>
+                <tr>
+                    <td>(_)</td>
+                    <td>ey (e + ih)</td>
+                    <td>mouse</td>
+                    <td>o / ou</td>
+                    <td>)))</td>
+                </tr>
+            </table>
+
+            <div class="text-xs">
+                <p>
+                    1. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime error suscipit vero id expedita magnam!
+                </p>
+                <p>
+                    2. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nam, quidem.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="vowels" class="mb-4">
+    <Collapse name="Vowels" />
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut culpa
+        ullam sed facere commodi saepe animi nisi. Corrupti, quidem excepturi.
+    </div>
+</section>

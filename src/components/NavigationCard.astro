@@ -1,0 +1,17 @@
+---
+import Tag from "../components/Tag";
+---
+<section
+    class="hidden lg:flex flex-col bg-off-white h-fit pt-4 pb-10 px-4 w-65 sticky top-8 text-sm shadow-md shadow-shadow"
+>
+    <div class="hover-underline-link">
+        <slot />
+    </div>
+
+    <div id="collapse" class="mt-6 mb-3 cursor-pointer">
+        <Tag content="Collapse All" />
+    </div>
+    <div id="expand" class="cursor-pointer">
+        <Tag content="Expand All" color="gray" />
+    </div>
+</section>

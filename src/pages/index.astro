@@ -1,70 +1,38 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import image_desc from "../content/image_desc.json";
-import TagList from "../components/TagList.tsx";
-let tags = image_desc[0].tags;
+import formattedDate from "../scripts/last-updated.js";
+import Gallery from "../components/Gallery";
+import SiteSummary from "../components/SiteSummary";
 ---
 
-<script defer define:vars={{ tags }}>
-    document.addEventListener("DOMContentLoaded", () => {
-        const card = document.querySelector("#gallery-card");
-        const images = document.querySelectorAll(".gallery-img");
-
-        images.forEach(img => {
-            img.addEventListener("click", () => {
-                card.src = img.src;
-                card.alt = img.alt;
-                tags = JSON.parse(img.dataset.tags);
-				console.log(tags);
-            });
-        });
-    });
-</script>
-
-<BaseLayout title="A Guide to the Einasvel">
+<BaseLayout title="A Guide to the Einasvel" lastUpdate={formattedDate}>
 	<section
 		slot="header"
-		class="w-full max-w-200 m-auto h-200 mt-33 text-center"
+		class="w-full max-w-220 m-auto h-200 mt-33 text-center px-10 md:px-20"
 	>
-		<h1 class="text-6xl font-bold mb-2">A Guide to the Einasvel</h1>
-		<p class="text-xl mb-3">
+		<h1 class="text-4xl md:text-6xl font-bold mb-2">
+			A Guide to the Einasvel
+		</h1>
+		<p class="text-lg md:text-xl mb-3">
 			Welcome to the planet Mk°mih'oh! This site hosts the collective
 			information on my world and its inhabitants, spanning all the way
 			back to its creation in November 2022.
 		</p>
-		<p class="text-base w-[75%] m-auto">
-			Not sure where to start? Look below for a brief summary of each
-			page! Note: This site looks best on larger screens.
-		</p>
 	</section>
 
-	<p class="section-header text-font">Site Summary</p>
-	<p class="section-desc text-font">
-		Not sure where to start? Look below for a brief summary of each page!
-	</p>
-	<div class="flex flex-row gap-1">
-		<section class="flex flex-wrap gap-1">
-			{
-				image_desc.map((i) => (
-					<img
-						src={i.src}
-						alt={i.alt}
-						data-tags={JSON.stringify(i.tags)}
-						class="gallery-img size-24 object-cover cursor-pointer"
-					/>
-				))
-			}
-		</section>
-		<div class="min-w-100 w-100 bg-off-white p-3">
-			<div class="w-full aspect-square content-center">
-				<img src={image_desc[0].src} alt={image_desc[0].alt} id="gallery-card" class="max-w-full max-h-full m-auto" />
-			</div>
-				
-			<div class="flex flex-wrap gap-1" id="tags">
-				{tags.map((t: string) => <div class="bg-red-100">{t}</div>)}
-			</div>
-			<TagList client:load />
-			<p></p>
-		</div>
+	<div id="site-summary" class="section-header text-font">
+		<p>Site Summary</p>
+		<hr />
+		<p class="section-desc">
+			Not sure where to start? Look below for a brief summary of each
+			page!
+		</p>
 	</div>
+	<SiteSummary client:visible />
+
+	<div id="gallery" class="section-header text-font">
+		<p>Gallery</p>
+		<hr />
+	</div>
+	<Gallery client:visible />
 </BaseLayout>

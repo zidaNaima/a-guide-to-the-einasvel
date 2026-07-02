@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import formattedDate from "../scripts/last-updated.js";
+import NavigationCard from "../components/NavigationCard.astro";
+import SelfExpression from "../components/society/SelfExpression.astro";
+---
+
+<script src="../scripts/collapse-section.js"></script>
+
+<BaseLayout title="Society | A Guide to the Einasvel" lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Society | Enausq'/hl/</h1>
+        <p class="text-base">
+            Learn about the Einasvel culture and the makeup of their anatomy.
+            Read about beliefs, clothing, and hunting practices.
+        </p>
+    </section>
+
+    <div class="flex flex-row-reverse justify-between gap-15">
+        <!-- navigation card -->
+        <NavigationCard>
+            <a href="#self-expression" class="font-bold">
+                Forms of Self Expression
+            </a>
+            <div class="leading-5 ml-4 mb-4 flex flex-col">
+                <a href="#hair">The Significance of Hair</a>
+                <a href="#body-language">Body Language</a>
+            </div>
+        </NavigationCard>
+
+        <section class="w-full text-font underline-link link-on-dark">
+            <SelfExpression />
+        </section>
+    </div>
+</BaseLayout>
