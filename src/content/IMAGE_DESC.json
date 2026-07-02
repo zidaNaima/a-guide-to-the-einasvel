@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Unnamed",
+        "src": "../../public/homeMain.png",
+        "alt": "A group of Einasvel staring at the camera while pausing during different activities. They are in a field of inhabited Paupau trees on a bright day.",
+        "tags": [
+            "Galaxy",
+            "Society",
+            "Language",
+            "Stories",
+            "Organic Life",
+            "About Me"
+        ]
+    },
+    {
+        "name": "Ooheihaudeih",
+        "src": "../../public/ooheih.png",
+        "alt": "An Ooheihaudeih. A blue creature with a mouse-like body, two red tails, and large black horns.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Okshlihd Icon",
+        "src": "../../public/okshlidIcon.png",
+        "alt": "A drawing of a flying ok°s/hl/ihd.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Idauhl Alphabet",
+        "src": "../../public/idauhl.png",
+        "alt": "The alphabet for a grid-like language that uses dashes and lines, and a demonstration of how the language looks when carved into a tree.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Map of Mk'mih'oh",
+        "src": "../../public/map.png",
+        "alt": "A Map of Mikimoh with named continents and visible lines around the tropics.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Enausq'/hl/ Number System",
+        "src": "../../public/numbers.png",
+        "alt": "The writing structure for numbers that uses different numbers of lines on different parts of a base form to signify a number.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "OC's in the Living Room",
+        "src": "../../public/livingRoom.png",
+        "alt": "A drawing of two characters (Hubert and Tobias) sitting on a couch in their living room while a young girl (Eleanor) marches through the front door, soaked and carrying a large stick.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Water Eater (Adult)",
+        "src": "../../public/waterEater.png",
+        "alt": "Drawing of a Water-Eater, a yellow hippo-like creature with two additional small arms on the front and a large brightly colored tail.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Campfire",
+        "src": "../../public/comic.png",
+        "alt": "An Einasvel (Maukkohd), an Oele'in (Ehlaunoh), and a Water-Eater relaxing around a fire.",
+        "tags": [
+            "Gallery Only"
+        ]
+    },
+    {
+        "name": "Food Fight",
+        "src": "../../public/fight.png",
+        "alt": "Two Einasvel fighting over a piece of fish. The one in front is in a threatening attack position. A map of the world is behind them.",
+        "tags": [
+            "Gallery Only"
+        ]
+    }
+]
