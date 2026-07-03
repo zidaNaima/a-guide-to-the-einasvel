@@ -66,26 +66,29 @@ const ContactForm = ({ location, namePlaceholder, contactPlaceholder, messagePla
                 name="location"
                 className="hidden"
             />
-            <label htmlFor="name">Name</label>
+            <label htmlFor="form-name">Name</label>
             <input
                 type="text"
                 placeholder={namePlaceholder}
                 name="name"
+                id="form-name"
                 autoComplete="++++++"
                 className="py-2 px-3 w-full bg-white rounded-[8px] border mt-2 mb-6"
             />
-            <label htmlFor="contact">Contact*</label>
+            <label htmlFor="form-contact">Contact*</label>
             <input
                 type="text"
                 placeholder={contactPlaceholder}
                 name="contact"
+                id="form-contact"
                 autoComplete="email tel"
                 className="py-2 px-3 w-full bg-white rounded-[8px] border mt-2 mb-6"
             />
-            <label htmlFor="message">Message*</label>
+            <label htmlFor="form-message">Message*</label>
             <textarea
                 placeholder={messagePlaceholder}
                 name="message"
+                id="form-message"
                 className="py-2 px-3 w-full h-20 bg-white rounded-[8px] border resize-none mt-2 mb-6"
             >
             </textarea>

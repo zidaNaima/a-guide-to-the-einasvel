@@ -231,6 +231,10 @@ footer a {
         width: 100%;
         padding: 8px 48px 8px 24px;
     }
+
+    .page-title {
+        margin-top: 84px;
+    }
 }
 
 /* below sm */
