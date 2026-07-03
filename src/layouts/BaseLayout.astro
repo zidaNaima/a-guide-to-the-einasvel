@@ -1,6 +1,8 @@
 ---
 import "../global.css";
 const { title, lastUpdate } = Astro.props;
+import { ClientRouter } from "astro:transitions";
+import Navigation from "./Navigation";
 ---
 
 <html lang="en">
@@ -17,6 +19,7 @@ const { title, lastUpdate } = Astro.props;
 			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
 			rel="stylesheet"
 		/>
+		<ClientRouter />
 	</head>
 
 	<body
@@ -28,48 +31,7 @@ const { title, lastUpdate } = Astro.props;
 		<header
 			class="h-13 mb-8 bg-secondary content-center shadow-md shadow-primary/20"
 		>
-			<nav>
-				<ul
-					class="flex justify-center text-font-blue text-sm font-medium tracking-wide"
-				>
-					<li>
-						<a href="/" class="main">Home</a>
-						<ul>
-							<li><a href="/#site-summary">Site Summary</a></li>
-							<li><a href="/#gallery">Gallery</a></li>
-						</ul>
-					</li>
-					<li><a href="/galaxy" class="main">Galaxy</a></li>
-					<li><a href="/life" class="main">Organic Life</a></li>
-					<li>
-						<a href="/society" class="main">Society</a>
-						<ul>
-							<li><a href="/society#self-expression">Forms of Self Expression</a></li>
-							<div class="sub">
-								<li><a href="/society#hair">The Significance of Hair</a></li>
-								<li><a href="/society#body-language">Body Language</a></li>
-							</div>
-						</ul>
-					</li>
-					<li>
-						<a href="/language" class="main">Language</a>
-						<ul>
-							<li><a href="/language#phonology">Phonology</a></li>
-							<div class="sub">
-								<li><a href="/language#consonants">Consonants</a></li>
-								<li><a href="/language#vowels">Vowels</a></li>
-							</div>
-						</ul>
-					</li>
-					<li><a href="/stories" class="main">Stories</a></li>
-					<li>
-						<a href="/about" class="main">About Me</a>
-						<ul>
-							<li><a href="/about#contact">Contact</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
+			<Navigation pathname={Astro.url.pathname} />
 		</header>
 
 		<slot name="header" />
