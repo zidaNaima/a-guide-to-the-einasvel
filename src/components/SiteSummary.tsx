@@ -7,37 +7,37 @@ const SiteSummary = () => {
             page: "Galaxy",
             desc: "Learn information on the climate and orbit of Mk'mih'oh.",
             link: "/galaxy",
-            src: "../../public/map.png"
+            src: "/map.png"
         },
         {
             page: "Organic Life",
             desc: "Learn about the plants and animals that live on the planet Mk'mih'oh.",
             link: "/life",
-            src: "../../public/waterEater.png"
+            src: "/waterEater.png"
         },
         {
             page: "Society",
             desc: "Learn about the Einasvel culture and the makeup of their anatomy. Read about beliefs, clothing, and hunting practices.",
             link: "/society",
-            src: "../../public/fight.png"
+            src: "/fight.png"
         },
         {
             page: "Language",
             desc: "Learn about the Naunoh/hl/oh language, listen to its sounds, and translate your own sentences.",
             link: "/language",
-            src: "../../public/numbers.png"
+            src: "/numbers.png"
         },
         {
             page: "Stories",
             desc: "Read about how two cultures colide whrn an Oele'in is stranded far from home, or about how stars can't always be seen from the ground.",
             link: "/stories",
-            src: "../../public/comic.png"
+            src: "/comic.png"
         },
         {
             page: "About Me",
             desc: "Learn more about me and my projects outside of this one! See how I take characters from this world and humanize them.",
             link: "/about",
-            src: "../../public/livingRoom.png"
+            src: "/livingRoom.png"
         }
     ]
 
