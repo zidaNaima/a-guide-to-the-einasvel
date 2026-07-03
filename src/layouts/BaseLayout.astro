@@ -29,9 +29,9 @@ import Navigation from "./Navigation";
 		<a href="#top" id="jump-to-top">Jump To Top</a>
 
 		<header
-			class="h-13 mb-8 bg-secondary content-center shadow-md shadow-primary/20"
+			class="h-13 w-full mb-8 bg-secondary content-center shadow-md shadow-primary/20 fixed md:relative"
 		>
-			<Navigation pathname={Astro.url.pathname} />
+			<Navigation pathname={Astro.url.pathname} client:load />
 		</header>
 
 		<slot name="header" />
