@@ -17,15 +17,20 @@
         "src": "/ooheih.png",
         "alt": "An Ooheihaudeih. A blue creature with a mouse-like body, two red tails, and large black horns.",
         "tags": [
-            "Gallery Only"
+            "Organic Life"
         ]
     },
     {
         "name": "Okshlihd Icon",
         "src": "/okshlidIcon.png",
-        "alt": "A drawing of a flying ok°s/hl/ihd.",
+        "alt": "A drawing of a flying Ok°s/hl/ihd.",
         "tags": [
-            "Gallery Only"
+            "Galaxy",
+            "Society",
+            "Language",
+            "Stories",
+            "Organic Life",
+            "About Me"
         ]
     },
     {
@@ -63,7 +68,7 @@
     {
         "name": "Water Eater (Adult)",
         "src": "/waterEater.png",
-        "alt": "Drawing of a Water-Eater, a yellow hippo-like creature with two additional small arms on the front and a large brightly colored tail.",
+        "alt": "Drawing of a Water-Eater, a yellow hippo-like creature with two additional small arms on the front and a large, brightly colored tail.",
         "tags": [
             "Gallery Only"
         ]
@@ -82,6 +87,14 @@
         "alt": "Two Einasvel fighting over a piece of fish. The one in front is in a threatening attack position. A map of the world is behind them.",
         "tags": [
             "Gallery Only"
+        ]
+    },
+    {
+        "name": "Distribution Map",
+        "src": "/dist-map.png",
+        "alt": "A default distribution map for a species.",
+        "tags": [
+            "Organic Life"
         ]
     }
 ]
