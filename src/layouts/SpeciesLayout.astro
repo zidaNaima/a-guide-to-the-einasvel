@@ -1,0 +1,36 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import formattedDate from "../scripts/last-updated.ts";
+const { title } = Astro.props;
+---
+
+<script>
+    // script reloads when page is entered
+    document.addEventListener("astro:page-load", () => {
+        const btn = document.querySelector("#back-button");
+        btn?.addEventListener("click", () => {
+            window.history.back();
+        });
+    });
+</script>
+
+<BaseLayout title={title} lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Life | Desihm</h1>
+        <p class="text-base">
+            Learn about the plants and animals that live on the planet
+            Mk'mih'oh.
+        </p>
+    </section>
+
+    <button
+        id="back-button"
+        class="text-font border rounded-full w-fit px-6 py-1 mb-6"
+    >
+        &larr; Go Back
+    </button>
+
+    <div class="bg-off-white w-full h-fit p-6">
+        <slot />
+    </div>
+</BaseLayout>

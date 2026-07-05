@@ -1,0 +1,60 @@
+---
+import SpeciesLayout from "../../layouts/SpeciesLayout.astro";
+import {
+    SpeciesBuildCard,
+    SpeciesMapCard,
+} from "../../components/life/SpeciesInfoCards";
+---
+
+<SpeciesLayout title="Ooheihaudeih | A Guide to the Einasvel">
+    <div class="section-header text-font-secondary">
+        <p>Ooheihaudeih</p>
+        <hr />
+        <p class="section-desc">
+            Built like a bison and as common as deer, many folklore tales
+            revolve around Ooheihaudeih due to their uncomfortably dexterous
+            hands and uncanny resemblance to an Enausq'/hl/ face. In the dark,
+            it is an unwelcome sight.
+        </p>
+    </div>
+
+    <!-- change lg:block to sm:block if only one card used -->
+    <section class="flex flex-wrap lg:block">
+        <SpeciesBuildCard
+            src="/ooheih.png"
+            alt="An Ooheihaudeih. A blue creature with a mouse-like body, two red tails, and large black horns."
+            size="8ft without horns"
+            weight="900lbs"
+            lifespan="15-20 years"
+            habitat="In and around densely forested areas"
+        />
+
+        <SpeciesMapCard
+            src="/dist-map.png"
+            alt="A distribution map for the Ooheihaudeih species."
+            text="In and around densely forested areas"
+            client:load
+        />
+
+        <div class="flex flex-col gap-3">
+            <p>
+                <span class="font-bold text-lg block">Reputation</span>
+                They are herded by some, but because they are still dangerous, it
+                is not extremely common. Killing them is slightly looked down on due
+                to the resemblance, but their fur is the best source of hair extentions.
+                If you do kill one, their horns make wonderful weapons in combat,
+                although horned combat is difficult to learn, and doing the needed
+                alterations to the horns is not a common skill.
+            </p>
+            <p>
+                The front of their faces are covered in a hard plate, where
+                their noses lies attached at the bottom. They can drink water
+                through their nose, but can't move this plate, so they have a
+                long tongue to pick up food. They have four eyes, two to the
+                sides and two at the front
+            </p>
+        </div>
+
+        <div class="clear-both"></div>
+    </section>
+</SpeciesLayout>

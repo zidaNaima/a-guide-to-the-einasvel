@@ -134,7 +134,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
                                         </button>
                                     </div>
 
-                                    {(pathname === r.href) &&
+                                    {(pathname === r.href.split("/")[1]) &&
                                         <img
                                             style={{ viewTransitionName: `nav-pill` } as React.CSSProperties}
                                             src="./okshlidIcon.png" className="nav-pill"
