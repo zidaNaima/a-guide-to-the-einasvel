@@ -1,4 +1,5 @@
-window.addEventListener("DOMContentLoaded", () => {
+// script reloads when page is entered
+document.addEventListener("astro:page-load", () => {
     const collapse = document.querySelector("#collapse");
     const expand = document.querySelector("#expand");
     const toggles = document.querySelectorAll(".section-toggle");
