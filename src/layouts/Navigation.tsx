@@ -27,6 +27,16 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Organic Life",
             href: "/life",
+            sections: [
+                {
+                    name: "Phylogenetic Tree",
+                    id: "phylogenetic",
+                },
+                {
+                    name: "Full Species List",
+                    id: "species-list",
+                },
+            ]
         },
         {
             main: "Society",

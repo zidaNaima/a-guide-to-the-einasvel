@@ -174,6 +174,172 @@ footer a {
     }
 }
 
+.phylo-wrapper {
+    overflow: auto;
+    height: fit-content;
+    min-height: 300px;
+    max-height: 800px;
+    border: 1px solid var(--color-off-white);
+}
+
+.phylo {
+    display: inline-block;
+}
+
+.phylo ul {
+    padding-left: 45px;
+    position: relative;
+}
+
+.phylo li {
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 5px 0;
+    color: var(--color-font);
+    display: flex;
+}
+
+.phylo .active {
+    color: #67320B;
+    background-color: var(--color-link-dark);
+    border: 1px solid #67320B;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: -4px -8px;
+}
+
+/* | */
+.phylo li::before,
+.phylo li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border-left: 1px solid var(--color-off-white);
+    width: 18px;
+    height: 50%;
+}
+
+/* - child */
+.phylo li::after {
+    bottom: auto;
+    top: 50%;
+    border-top: 1px solid var(--color-off-white);
+}
+
+.phylo li:only-child::after,
+.phylo li:only-child::before {
+    display: none;
+}
+
+.phylo li:only-child {
+    padding-left: 0;
+}
+
+.phylo li:first-child::before,
+.phylo li:last-child::after {
+    border: 0 none;
+}
+
+/* - last child */
+.phylo li:last-child::before {
+    border-bottom: 1px solid var(--color-off-white);
+    border-radius: 0 0 0 5px;
+}
+
+.phylo li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+/* parent - */
+.phylo ul ul::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    border-bottom: 1px solid var(--color-off-white);
+    width: 20px;
+    height: 0;
+}
+
+.phylo li .phylo-item:hover+ul li::after,
+.phylo li .phylo-item:hover+ul li::before,
+.phylo li .phylo-item:hover+ul::before,
+.phylo li .phylo-item:hover+ul ul::before {
+    border-color: var(--color-link-dark);
+}
+
+.phylo-extension {
+    width: 33px;
+    margin-left: -2px;
+    margin-right: 8px;
+    border-bottom: 1px solid var(--color-off-white);
+    margin-top: 1px;
+}
+
+.phylo-fill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100px;
+
+    span {
+        flex-grow: 1;
+        height: 1px;
+        margin-right: -5px;
+        border-bottom: 1px solid var(--color-off-white);
+    }
+}
+
+.phylo-item {
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        margin-right: 8px;
+    }
+    
+    p, a {
+        text-align: left;
+        width: max-content;
+        max-width: 100px;
+        max-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.species-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 8px 24px;
+}
+
+.species-list-item {
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+        margin-right: 8px;
+    }
+    
+    p, a {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 132px;
+        max-height: 40px;
+    }
+}
+
 /* md and above */
 @media(min-width: 768px) {
     nav li:hover ul {

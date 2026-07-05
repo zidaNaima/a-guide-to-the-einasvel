@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import formattedDate from "../scripts/last-updated.ts";
+import Phylogenetic from "../components/life/Phylogenetic";
+import SpeciesList from "../components/life/SpeciesList";
+---
+
+<BaseLayout
+    title="Organic Life | A Guide to the Einasvel"
+    lastUpdate={formattedDate}
+>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Life | Desihm</h1>
+        <p class="text-base">
+            Learn about the plants and animals that live on the planet
+            Mk'mih'oh.
+        </p>
+    </section>
+
+    <div id="phylogenetic" class="section-header text-font">
+        <p>Phylogenetic Tree</p>
+        <hr />
+        <p class="md:hidden section-desc">
+            NOTE: This section can only be viewed on larger screens. Check out the full list of species below instead!
+        </p>
+    </div>
+    <div class="mb-20">
+        <Phylogenetic client:only />
+    </div>
+
+    <div id="species-list" class="section-header text-font">
+        <p>Full Species List</p>
+        <hr />
+    </div>
+    <SpeciesList client:only />
+</BaseLayout>
