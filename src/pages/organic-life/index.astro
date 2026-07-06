@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { title } = Astro.props;
+import formattedDate from "../../scripts/last-updated.ts";
+---
+
+<BaseLayout title={title} lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Life | Desihm</h1>
+        <p class="text-base">
+            Learn about the plants and animals that live on the planet
+            Mk'mih'oh.
+        </p>
+    </section>
+
+    <section slot="tabs">
+        <a href="/organic-life/animals">Animals</a>
+    </section>
+
+    <slot />
+</BaseLayout>

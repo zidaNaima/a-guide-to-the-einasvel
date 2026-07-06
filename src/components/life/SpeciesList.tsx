@@ -26,7 +26,7 @@ const SpeciesList = () => {
                             <li key={s.src}>
                                 <div className="species-list-item">
                                     <img src={s.src} />
-                                    <div className={`${s.children && "phylo-fill"}`}><a href={`organic-life${s.href}`}><p>{s.name}</p></a><span></span></div>
+                                    <div className={`${s.children && "phylo-fill"}`}><a href={`organic-life/species${s.href}`}><p>{s.name}</p></a><span></span></div>
                                 </div>
                             </li>
                         </>

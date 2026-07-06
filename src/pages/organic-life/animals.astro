@@ -1,19 +1,15 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import formattedDate from "../scripts/last-updated.ts";
-import Phylogenetic from "../components/life/Phylogenetic";
-import SpeciesList from "../components/life/SpeciesList";
+import Life from "./index.astro";
+import formattedDate from "../../scripts/last-updated.ts";
+import Phylogenetic from "../../components/life/Phylogenetic";
+import SpeciesList from "../../components/life/SpeciesList";
 ---
 
-<BaseLayout
-    title="Organic Life | A Guide to the Einasvel"
-    lastUpdate={formattedDate}
->
+<Life title="Animals" lastUpdate={formattedDate}>
     <section slot="header" class="w-full max-w-335 m-auto px-12">
         <h1 class="page-title">The Life | Desihm</h1>
         <p class="text-base">
-            Learn about the plants and animals that live on the planet
-            Mk'mih'oh.
+            
         </p>
     </section>
 
@@ -33,4 +29,4 @@ import SpeciesList from "../components/life/SpeciesList";
         <hr />
     </div>
     <SpeciesList client:only />
-</BaseLayout>
+</Life>

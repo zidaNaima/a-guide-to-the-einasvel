@@ -8,7 +8,7 @@ const Node = ({ node }: { node: any }) => {
                 {node.href ?
                     <>
                         <img src={node.src} />
-                        <div className={`${node.children && "phylo-fill"}`}><a href={`organic-life${node.href}`}><p>{node.name}</p></a><span></span></div>
+                        <div className={`${node.children && "phylo-fill"}`}><a href={`organic-life/species${node.href}`}><p>{node.name}</p></a><span></span></div>
                     </>
                     :
                     <>
