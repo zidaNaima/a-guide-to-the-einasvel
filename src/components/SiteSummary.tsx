@@ -12,7 +12,7 @@ const SiteSummary = () => {
         {
             page: "Organic Life",
             desc: "Learn about the plants and animals that live on the planet Mk'mih'oh.",
-            link: "/life",
+            link: "/organic-life",
             src: "/waterEater.png"
         },
         {
