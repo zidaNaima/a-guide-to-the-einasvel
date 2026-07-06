@@ -9,14 +9,20 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Home",
             href: "/",
-            sections: [
+            pages: [
                 {
-                    name: "Site Summary",
-                    id: "site-summary",
-                },
-                {
-                    name: "Gallery",
-                    id: "gallery"
+                    name: "Home",
+                    path: "",
+                    sections: [
+                        {
+                            name: "Site Summary",
+                            id: "site-summary",
+                        },
+                        {
+                            name: "Gallery",
+                            id: "gallery"
+                        }
+                    ]
                 }
             ]
         },
@@ -45,16 +51,6 @@ const Navigation = ({ pathname }: NavigationProps) => {
                 {
                     name: "Forms of Self Expression",
                     id: "self-expression",
-                },
-                {
-                    name: "The Significance of Hair",
-                    id: "hair",
-                    isSub: true
-                },
-                {
-                    name: "Body Language",
-                    id: "body-language",
-                    isSub: true
                 }
             ]
         },
@@ -65,16 +61,6 @@ const Navigation = ({ pathname }: NavigationProps) => {
                 {
                     name: "Phonology",
                     id: "phonology",
-                },
-                {
-                    name: "Consonants",
-                    id: "consonants",
-                    isSub: true
-                },
-                {
-                    name: "Vowels",
-                    id: "vowels",
-                    isSub: true
                 }
             ]
         },
@@ -85,10 +71,20 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "About Me",
             href: "/about",
-            sections: [
+            pages: [
                 {
-                    name: "Contact",
-                    id: "contact",
+                    name: "Naima",
+                    path: "/naima",
+                    sections: [
+                        {
+                            name: "About the Creator",
+                            id: "about-the-creator",
+                        }
+                    ]
+                },
+                {
+                    name: "Contact Me",
+                    path: "/contact-me",
                 }
             ]
         },
@@ -123,6 +119,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
                         routes.map(r => (
                             <div key={r.href}>
                                 <li>
+                                    {/* ham nav expansion */}
                                     <div className="flex justify-between">
                                         <a href={r.href} className="main">{r.main}</a>
                                         <button
@@ -134,19 +131,30 @@ const Navigation = ({ pathname }: NavigationProps) => {
                                         </button>
                                     </div>
 
+                                    {/* nav pill */}
                                     {(pathname === r.href.split("/")[1]) &&
                                         <img
                                             style={{ viewTransitionName: `nav-pill` } as React.CSSProperties}
-                                            src="./okshlidIcon.png" className="nav-pill"
+                                            src="/okshlidIcon.png" className="nav-pill"
                                         />
                                     }
-                                    <ul id={`${r.main.replace(" ", "-")}`} className="sub-nav">
-                                        {r.sections &&
-                                            r.sections.map(s => (
-                                                <li key={s.id}><a href={`${r.href}#${s.id}`} className={`${s.isSub && "sub"}`}>{s.name}</a></li>
+
+                                    <ul id={`${r.main.replace(" ", "-")}`}>
+                                        {r.pages &&
+                                            r.pages.map(p => (
+                                                <li key={p.name} className="md:mt-2">
+                                                    {p.name !== "Home" &&
+                                                        <a href={`${r.href}${p.path}`}>{p.name}</a>
+                                                    }
+
+                                                    {p.sections && p.sections.map(s => (
+                                                        <a key={s.name} href={`${r.href}${p.path}#${s.id}`} className="sub">{s.name}</a>
+                                                    ))}
+                                                </li>
                                             ))
                                         }
                                     </ul>
+
                                 </li>
                             </div>
                         ))

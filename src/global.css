@@ -64,25 +64,25 @@ nav .main:hover {
 nav li ul {
     display: none;
     position: absolute;
-    padding: 10px 0;
+    padding-bottom: 10px;
     background-color: var(--color-secondary);
     box-shadow: 0px 4px 6px -1px rgb(from var(--color-primary) r g b / 0.3);
     font-weight: bold;
     z-index: 2;
 
-    li {
-        padding: 0 20px 2px;
+    li a {
+        padding: 0 20px;
         cursor: pointer;
     }
 
-    li:hover {
+    li a:hover {
         text-decoration: underline;
     }
 
     .sub {
         font-weight: 400;
-        margin-bottom: 10px;
-        margin-left: 10px;
+        margin: 2px 0 0 10px;
+        display: block;
     }
 
     &::after {
@@ -131,6 +131,31 @@ nav li ul {
     font-size: medium;
     font-weight: lighter;
     margin-top: 8px;
+}
+
+/* target the slot */
+#tabs-section>* {
+    display: flex;
+    gap: 10px;
+    /* match main container sizing */
+    width: 95%;
+    margin: auto;
+    max-width: 1340px;
+    padding: 0 40px;
+}
+
+#tabs-section a {
+    width: 150px;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--color-primary);
+    box-shadow: inset 0 -18px 10px -10px rgb(from var(--color-shadow) r g b / 0.2);
+}
+
+#tabs-section a.active {
+    background-color: rgb(from var(--color-primary) r g b / 0.85);
+    box-shadow: none;
 }
 
 footer a {
@@ -395,7 +420,13 @@ footer a {
 
     nav li ul li {
         width: 100%;
-        padding: 8px 48px 8px 24px;
+
+        .sub {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 0;
+            border-bottom: 1px solid transparent;
+        }
     }
 
     .page-title {
@@ -419,7 +450,7 @@ footer a {
     }
 
     nav li ul li {
-        padding-right: 12px;
-        padding-left: 12px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

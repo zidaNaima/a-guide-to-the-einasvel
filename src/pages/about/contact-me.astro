@@ -1,0 +1,23 @@
+---
+import About from "./index.astro";
+import formattedDate from "../../scripts/last-updated.ts";
+import ContactForm from "../../components/ContactForm";
+---
+
+<About title="Contact Me" lastUpdate={formattedDate}>
+    <div id="contact-me" class="section-header text-font">
+        <p>Contact Me</p>
+        <hr />
+        <p class="section-desc">I always enjoy a chat!</p>
+    </div>
+
+    <div class="min-w-70 sm:w-100 m-auto">
+        <ContactForm
+            namePlaceholder="Maukkohd"
+            contactPlaceholder="maukkohd@einasvel.com"
+            messagePlaceholder="De'ih Enausq'/hl/"
+            location="Guide V2 | Contact"
+            client:load
+        />
+    </div>
+</About>

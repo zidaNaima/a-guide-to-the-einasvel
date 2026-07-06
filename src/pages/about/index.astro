@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { title } = Astro.props;
+import formattedDate from "../../scripts/last-updated.ts";
+---
+
+<BaseLayout title={title} lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Creator | Me!</h1>
+        <p class="text-base">
+            Learn more about me and my projects outside of this one! See how I
+            take characters from this world and humanize them.
+        </p>
+    </section>
+
+    <section slot="tabs">
+        <a href="/about/naima">Naima</a>
+        <a href="/about/contact-me">Contact Me</a>
+    </section>
+
+    <slot />
+</BaseLayout>
