@@ -5,15 +5,36 @@ import { ClientRouter } from "astro:transitions";
 import Navigation from "./Navigation";
 ---
 
-<script src="../scripts/default-page-tabs.ts"></script>
 <script>
+	window.addEventListener("load", () => {
+		// declare initial default page routes only on the first load
+		sessionStorage.setItem("aboutPgTab", "/about/naima");
+		sessionStorage.setItem("lifePgTab", "/organic-life/animals");
+	}, {once: true});
+
 	document.addEventListener("astro:page-load", () => {
+		// set active tab styling
 		const tabs = document.querySelectorAll("#tabs-section a");
 		tabs.forEach(
 			(tab) =>
-				tab.getAttribute("href") == location.pathname &&
+				tab.getAttribute("href") === location.pathname &&
 				tab.classList.add("active"),
 		);
+
+		// save current path for page
+		const targetPath = location.pathname;
+		switch (true) {
+			case targetPath.startsWith("/organic-life/"):
+				sessionStorage.setItem("lifePgTab", targetPath.split("#")[0]);
+				break;
+
+			case targetPath.startsWith("/about/"):
+				sessionStorage.setItem("aboutPgTab", targetPath.split("#")[0]);
+				break;
+
+			default:
+				break;
+		}
 	});
 </script>
 
@@ -43,7 +64,10 @@ import Navigation from "./Navigation";
 		<header
 			class="h-13 w-full mb-8 bg-secondary content-center shadow-md shadow-primary/20 fixed md:relative"
 		>
-			<Navigation pathname={Astro.url.pathname.split("/")[1]} client:load />
+			<Navigation
+				pathname={Astro.url.pathname.split("/")[1]}
+				client:only
+			/>
 		</header>
 
 		<slot name="header" />

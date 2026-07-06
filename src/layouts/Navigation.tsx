@@ -33,15 +33,22 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Organic Life",
             href: "/organic-life",
-            sections: [
+            session: "lifePgTab",
+            pages: [
                 {
-                    name: "Phylogenetic Tree",
-                    id: "phylogenetic",
-                },
-                {
-                    name: "Full Species List",
-                    id: "species-list",
-                },
+                    name: "Animals",
+                    path: "/animals",
+                    sections: [
+                        {
+                            name: "Phylogenetic Tree",
+                            id: "phylogenetic",
+                        },
+                        {
+                            name: "Full Species List",
+                            id: "species-list",
+                        },
+                    ]
+                }
             ]
         },
         {
@@ -71,6 +78,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "About Me",
             href: "/about",
+            session: "aboutPgTab",
             pages: [
                 {
                     name: "Naima",
@@ -119,9 +127,9 @@ const Navigation = ({ pathname }: NavigationProps) => {
                         routes.map(r => (
                             <div key={r.href}>
                                 <li>
-                                    {/* ham nav expansion */}
+                                    {/* main pages */}
                                     <div className="flex justify-between">
-                                        <a href={r.href} className="main">{r.main}</a>
+                                        <a href={sessionStorage.getItem(r.session || "") || r.href} className="main">{r.main}</a>
                                         <button
                                             id={r.href.replace("/", "btn-")}
                                             className="nav-btn pr-4 sm:px-6 -my-2 md:hidden cursor-pointer text-xl"
