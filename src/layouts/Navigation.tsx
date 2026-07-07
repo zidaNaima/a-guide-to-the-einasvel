@@ -29,11 +29,16 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Galaxy",
             href: "/galaxy",
+            pages: [
+                {
+                    name: "Mk'mih'oh",
+                    path: "/mk'mih'oh"
+                }
+            ]
         },
         {
             main: "Organic Life",
             href: "/organic-life",
-            session: "lifePgTab",
             pages: [
                 {
                     name: "Animals",
@@ -78,7 +83,6 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "About Me",
             href: "/about",
-            session: "aboutPgTab",
             pages: [
                 {
                     name: "Naima",
@@ -129,7 +133,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
                                 <li>
                                     {/* main pages */}
                                     <div className="flex justify-between">
-                                        <a href={sessionStorage.getItem(r.session || "") || r.href} className="main">{r.main}</a>
+                                        <a href={r.href} className="main">{r.main}</a>
                                         <button
                                             id={r.href.replace("/", "btn-")}
                                             className="nav-btn pr-4 sm:px-6 -my-2 md:hidden cursor-pointer text-xl"

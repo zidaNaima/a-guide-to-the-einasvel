@@ -5,13 +5,8 @@ import { ClientRouter } from "astro:transitions";
 import Navigation from "./Navigation";
 ---
 
+<script src="../scripts/default-page-tabs.ts"></script>
 <script>
-	window.addEventListener("load", () => {
-		// declare initial default page routes only on the first load
-		sessionStorage.setItem("aboutPgTab", "/about/naima");
-		sessionStorage.setItem("lifePgTab", "/organic-life/animals");
-	}, {once: true});
-
 	document.addEventListener("astro:page-load", () => {
 		// set active tab styling
 		const tabs = document.querySelectorAll("#tabs-section a");
@@ -66,7 +61,7 @@ import Navigation from "./Navigation";
 		>
 			<Navigation
 				pathname={Astro.url.pathname.split("/")[1]}
-				client:only
+				client:load
 			/>
 		</header>
 
