@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { title } = Astro.props;
+import formattedDate from "../../scripts/last-updated.ts";
+---
+
+<BaseLayout title={title} lastUpdate={formattedDate}>
+	<section slot="header" class="w-full max-w-335 m-auto px-12">
+		<h1 class="page-title">The Galaxy | Mk'mih'oh</h1>
+		<p class="text-base">
+			Learn information on the climate and orbit of Mk'mih'oh.
+		</p>
+	</section>
+
+    <section slot="tabs">
+        <a href="/galaxy/mk'mih'oh">Mk'mih'oh</a>
+    </section>
+
+    <slot><div class="text-font text-xl text-center">Select a Tab above to get started!</div></slot>
+</BaseLayout>
