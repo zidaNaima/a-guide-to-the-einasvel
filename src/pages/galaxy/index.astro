@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const { title } = Astro.props;
-import formattedDate from "../../scripts/last-updated.ts";
+const { title, formattedDate } = Astro.props;
 ---
 
 <BaseLayout title={title} lastUpdate={formattedDate}>

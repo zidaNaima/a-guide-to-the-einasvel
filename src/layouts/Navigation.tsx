@@ -59,20 +59,32 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Society",
             href: "/society",
-            sections: [
+            pages: [
                 {
-                    name: "Forms of Self Expression",
-                    id: "self-expression",
+                    name: "Enausq'/hl/",
+                    path: "/enausq'hl",
+                    sections: [
+                        {
+                            name: "Forms of Self Expression",
+                            id: "self-expression",
+                        }
+                    ]
                 }
             ]
         },
         {
             main: "Language",
             href: "/language",
-            sections: [
+            pages: [
                 {
-                    name: "Phonology",
-                    id: "phonology",
+                    name: "Naunoh/hl/oh",
+                    path: "/naunohhloh",
+                    sections: [
+                        {
+                            name: "Phonology",
+                            id: "phonology",
+                        }
+                    ]
                 }
             ]
         },

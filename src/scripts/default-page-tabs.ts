@@ -5,6 +5,8 @@ window.addEventListener("load", () => {
     sessionStorage.setItem("aboutPgTab", "/about/naima");
     sessionStorage.setItem("lifePgTab", "/organic-life/animals");
     sessionStorage.setItem("galaxyPgTab", "/galaxy/mk'mih'oh");
+    sessionStorage.setItem("langPgTab", "/language/naunohhloh");
+    sessionStorage.setItem("societyPgTab", "/society/enausq'hl");
 }, { once: true });
 
 document.addEventListener("astro:before-preparation", (event) => {
@@ -35,22 +37,44 @@ document.addEventListener("astro:before-preparation", (event) => {
             break;
 
         case (targetPath.startsWith("/organic-life/")):
-            // save current path
             sessionStorage.setItem("lifePgTab", targetPath.split("#")[0]);
             break;
 
-        case (targetPath === "/galaxy"):
+        case (targetPath === "/galaxy"): {
             event.preventDefault();
             const newPath =
                 sessionStorage.getItem("galaxyPgTab") || "/galaxy/mk'mih'oh";
             navigate(newPath);
+        }
             break;
 
         case (targetPath.startsWith("/galaxy/")):
-            // save current path
             sessionStorage.setItem("galaxyPgTab", targetPath.split("#")[0]);
             break;
 
+        case (targetPath === "/language"): {
+            event.preventDefault();
+            const newPath =
+                sessionStorage.getItem("langPgTab") || "/language/naunohhloh";
+            navigate(newPath);
+        }
+            break;
+
+        case (targetPath.startsWith("/language/")):
+            sessionStorage.setItem("langPgTab", targetPath.split("#")[0]);
+            break;
+
+        case (targetPath === "/society"): {
+            event.preventDefault();
+            const newPath =
+                sessionStorage.getItem("societyPgTab") || "/society/enausq'hl";
+            navigate(newPath);
+        }
+            break;
+
+        case (targetPath.startsWith("/society/")):
+            sessionStorage.setItem("societyPgTab", targetPath.split("#")[0]);
+            break;
 
         default:
             break;
