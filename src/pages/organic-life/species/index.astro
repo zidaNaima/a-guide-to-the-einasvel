@@ -1,0 +1,38 @@
+---
+import Life from "../index.astro";
+import formattedDate from "../../../scripts/last-updated.ts";
+const { title } = Astro.props;
+import SpeciesList from "../../../components/life/SpeciesList";
+---
+
+<script>
+    // script reloads when page is entered
+    document.addEventListener("astro:page-load", () => {
+        const btn = document.querySelector("#back-button");
+        btn?.addEventListener("click", () => {
+            window.history.back();
+        });
+    });
+</script>
+
+<Life title={title} lastUpdate={formattedDate}>
+    <button
+        id="back-button"
+        class="text-font border rounded-full w-fit px-6 py-1 mb-6"
+    >
+        &larr; Go Back
+    </button>
+
+    <div class="bg-off-white w-full h-fit p-6">
+        <slot>
+            <div class="section-header text-font-secondary">
+                <p>Full Species List</p>
+                <hr />
+                <p class="section-desc">Select an animal species below to get started</p>
+            </div>
+            <div class="link-on-light">
+                <SpeciesList client:only />
+            </div>
+        </slot>
+    </div>
+</Life>
