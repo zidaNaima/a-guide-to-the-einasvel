@@ -1,6 +1,7 @@
 ---
 import About from "./index.astro";
 import formattedDate from "../../scripts/last-updated.ts";
+import CharacterAccordion from "../../components/about/CharacterAccordion";
 ---
 
 <About title="Naima" lastUpdate={formattedDate}>
@@ -8,4 +9,10 @@ import formattedDate from "../../scripts/last-updated.ts";
         <p>About the Creator</p>
         <hr />
     </div>
+
+    <div id="other-work" class="section-header text-font">
+        <p>Other Work</p>
+        <hr />
+    </div>
+    <CharacterAccordion client:only />
 </About>

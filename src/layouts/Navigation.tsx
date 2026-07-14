@@ -103,6 +103,10 @@ const Navigation = ({ pathname }: NavigationProps) => {
                         {
                             name: "About the Creator",
                             id: "about-the-creator",
+                        },
+                        {
+                            name: "Other Work",
+                            id: "other-work",
                         }
                     ]
                 },
