@@ -321,15 +321,16 @@ footer a {
 .phylo-item {
     display: flex;
     align-items: center;
-    
+
     img {
         width: 30px;
         height: 30px;
         border-radius: 5px;
         margin-right: 8px;
     }
-    
-    p, a {
+
+    p,
+    a {
         text-align: left;
         width: max-content;
         max-width: 100px;
@@ -348,21 +349,204 @@ footer a {
 .species-list-item {
     display: flex;
     align-items: center;
-    
+
     img {
         height: 40px;
         width: 40px;
         border-radius: 5px;
         margin-right: 8px;
     }
-    
-    p, a {
+
+    p,
+    a {
         text-align: left;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 132px;
         max-height: 40px;
     }
+}
+
+#char-accordion {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    background-color: var(--color-light-gray);
+    border: 1px solid var(--color-shadow);
+    border-radius: 8px;
+}
+
+.acc-item {
+    display: flex;
+    flex-direction: row-reverse;
+    flex: 1;
+    position: relative;
+    max-width: 60px;
+    border-right: 1px solid var(--color-shadow);
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+}
+
+.acc-item.active {
+    max-width: 100%;
+}
+
+.acc-item:last-of-type {
+    border-right: none;
+    /* 1px less to accomodate border */
+    border-radius: 0 7px 7px 0;
+}
+
+.acc-item:first-of-type {
+    /* 1px less to accomodate border */
+    border-radius: 7px 0 0 7px;
+}
+
+/* full slide including content and background image */
+.acc-slide {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* slide content only */
+.acc-content {
+    z-index: 1;
+}
+
+.acc-bg {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    height: 100%;
+    min-width: max-content;
+    mask-image: linear-gradient(to left, rgb(0, 0, 0, 0.5), transparent 80%);
+    z-index: 0;
+}
+
+.acc-name {
+    position: relative;
+    min-width: 60px;
+    writing-mode: sideways-rl;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 4%;
+    color: var(--color-font);
+    text-shadow: 0 0 8px var(--color-shadow),
+        0.5px 0.5px 0 var(--color-shadow),
+        -0.5px 0.5px 0 var(--color-shadow),
+        -0.5px -0.5px 0 var(--color-shadow),
+        0.5px -0.5px 0 var(--color-shadow);
+    transition: background-color 1s ease;
+    cursor: pointer;
+    z-index: 2;
+
+    p {
+        position: absolute;
+        z-index: 1;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.acc-name:hover img {
+    filter: brightness(90%);
+}
+
+
+.carousel-section {
+    /* copy image size */
+    width: 250px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* copy image size */
+    width: 250px;
+    height: 250px;
+    padding: 8px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    border: 1px solid var(--color-shadow);
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    /* image only fades out when other fades in (overlap) */
+    transition-delay: 200ms;
+}
+
+.carousel-slide[data-active] {
+    opacity: 1;
+    /* image appears immediately */
+    transition-delay: 0ms;
+}
+
+.carousel-slide img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+    border-radius: 100%;
+    background-color: rgb(from var(--color-light-gray) r g b / 75%);
+    cursor: pointer;
+    z-index: 2;
+
+    svg {
+        fill: var(--color-shadow);
+    }
+}
+
+/* ONLY shared stylers */
+.carousel-arrow:hover {
+    background-color: var(--color-shadow);
+
+    svg {
+        fill: var(--color-light-gray);
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 12px 0;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--color-font-secondary);
+    border-radius: 100%;
+    transition: 200ms background-color ease-in-out;
+}
+
+.dot.active {
+    background-color: var(--color-font-secondary);
 }
 
 /* md and above */
@@ -431,6 +615,56 @@ footer a {
 
     .page-title {
         margin-top: 84px;
+    }
+
+    #char-accordion {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .acc-item {
+        flex-direction: column;
+        max-height: 55px;
+        max-width: none;
+        border-bottom: 1px solid var(--color-shadow);
+        border-right: none;
+    }
+
+    .acc-item.active {
+        max-height: 100%;
+    }
+
+    .acc-item:last-of-type {
+        border-bottom: none;
+        border-radius: 0 0 7px 7px;
+    }
+
+    .acc-item:first-of-type {
+        border-radius: 7px 7px 0 0;
+    }
+
+    .acc-slide {
+        padding: 16px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .acc-bg {
+        right: 0;
+    }
+
+    .acc-name {
+        min-height: 55px;
+        min-width: none;
+        writing-mode: horizontal-tb;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 55px;
+        }
     }
 }
 
