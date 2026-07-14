@@ -31,7 +31,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
             href: "/galaxy",
             pages: [
                 {
-                    name: "Mk'mih'oh",
+                    name: "Mk°mih'oh",
                     path: "/mk'mih'oh"
                 }
             ]
@@ -107,6 +107,10 @@ const Navigation = ({ pathname }: NavigationProps) => {
                         {
                             name: "Other Work",
                             id: "other-work",
+                        },
+                        {
+                            name: "Commission Information",
+                            id: "commissions",
                         }
                     ]
                 },
