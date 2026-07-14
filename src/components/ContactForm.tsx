@@ -2,13 +2,14 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 interface ContactFormProps {
-    location: string;
-    namePlaceholder: string;
-    contactPlaceholder: string;
-    messagePlaceholder: string;
+    location: string,
+    namePlaceholder: string,
+    contactPlaceholder: string,
+    messagePlaceholder: string,
+    text?: string
 }
 
-const ContactForm = ({ location, namePlaceholder, contactPlaceholder, messagePlaceholder }: ContactFormProps) => {
+const ContactForm = ({ text, location, namePlaceholder, contactPlaceholder, messagePlaceholder }: ContactFormProps) => {
     const form = useRef<HTMLFormElement>(null);
     emailjs.init("xfbPdiVD70qK8vTY3");
     const serviceId = "service_g63duhk";
@@ -61,6 +62,7 @@ const ContactForm = ({ location, namePlaceholder, contactPlaceholder, messagePla
 
     return (
         <form ref={form} onSubmit={sendEmail} className="flex flex-col self-end text-sm p-6 bg-off-white rounded-[8px]">
+            {text && <p className="mb-6">{text}</p>}
             <input
                 type="text"
                 name="location"
