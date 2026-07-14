@@ -5,15 +5,19 @@ const { title, formattedDate } = Astro.props;
 
 <BaseLayout title={title} lastUpdate={formattedDate}>
 	<section slot="header" class="w-full max-w-335 m-auto px-12">
-		<h1 class="page-title">The Galaxy | Mk'mih'oh</h1>
+		<h1 class="page-title">The Galaxy | Mk°mih'oh</h1>
 		<p class="text-base">
-			Learn information on the climate and orbit of Mk'mih'oh.
+			Learn information on the climate and orbit of Mk°mih'oh.
 		</p>
 	</section>
 
-    <section slot="tabs">
-        <a href="/galaxy/mk'mih'oh">Mk'mih'oh</a>
-    </section>
+	<section slot="tabs">
+		<a href="/galaxy/mk'mih'oh">Mk°mih'oh</a>
+	</section>
 
-    <slot><div class="text-font text-xl text-center">Select a Tab above to get started!</div></slot>
+	<slot
+		><div class="text-font text-xl text-center">
+			Select a Tab above to get started!
+		</div></slot
+	>
 </BaseLayout>

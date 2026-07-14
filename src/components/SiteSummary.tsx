@@ -5,13 +5,13 @@ const SiteSummary = () => {
     const pages = [
         {
             page: "Galaxy",
-            desc: "Learn information on the climate and orbit of Mk'mih'oh.",
+            desc: "Learn information on the climate and orbit of Mk°mih'oh.",
             link: "/galaxy",
             src: "/map.png"
         },
         {
             page: "Organic Life",
-            desc: "Learn about the plants and animals that live on the planet Mk'mih'oh.",
+            desc: "Learn about the plants and animals that live on the planet Mk°mih'oh.",
             link: "/organic-life",
             src: "/waterEater.png"
         },
