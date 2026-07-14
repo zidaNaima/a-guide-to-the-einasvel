@@ -1,8 +1,8 @@
 [
     {
-        "name": "Unnamed",
+        "name": "Welcome to K°epuhthenoh",
         "src": "/homeMain.png",
-        "alt": "A group of Einasvel staring at the camera while pausing during different activities. They are in a field of inhabited Paupau trees on a bright day.",
+        "alt": "Group of Einasvel staring at the camera while pausing during different activities. They are in a field of inhabited Paupau trees on a bright day.",
         "tags": [
             "Galaxy",
             "Society",
@@ -15,7 +15,7 @@
     {
         "name": "Ooheihaudeih",
         "src": "/ooheih.png",
-        "alt": "An Ooheihaudeih. A blue creature with a mouse-like body, two red tails, and large black horns.",
+        "alt": "Blue creature with a mouse-like body, two red tails, and large black horns.",
         "tags": [
             "Organic Life"
         ]
@@ -23,7 +23,7 @@
     {
         "name": "Okshlihd Icon",
         "src": "/okshlidIcon.png",
-        "alt": "A drawing of a flying Ok°s/hl/ihd.",
+        "alt": "Drawing of a group of flying Ok°s/hl/ihd.",
         "tags": [
             "Galaxy",
             "Society",
@@ -36,15 +36,15 @@
     {
         "name": "Idauhl Alphabet",
         "src": "/idauhl.png",
-        "alt": "The alphabet for a grid-like language that uses dashes and lines, and a demonstration of how the language looks when carved into a tree.",
+        "alt": "Alphabet for a grid-like language that uses dashes and lines, and a demonstration of how the language looks when carved into a tree.",
         "tags": [
             "Gallery Only"
         ]
     },
     {
-        "name": "Map of Mk'mih'oh",
+        "name": "Map of Mk°mih'oh",
         "src": "/map.png",
-        "alt": "A Map of Mikimoh with named continents and visible lines around the tropics.",
+        "alt": "Map of Mikimoh with named continents and visible lines around the tropics.",
         "tags": [
             "Gallery Only"
         ]
@@ -52,7 +52,7 @@
     {
         "name": "Enausq'/hl/ Number System",
         "src": "/numbers.png",
-        "alt": "The writing structure for numbers that uses different numbers of lines on different parts of a base form to signify a number.",
+        "alt": "Writing structure for numbers that uses different numbers of lines on different parts of a base form to signify a number.",
         "tags": [
             "Gallery Only"
         ]
@@ -60,7 +60,7 @@
     {
         "name": "OC's in the Living Room",
         "src": "/livingRoom.png",
-        "alt": "A drawing of two characters (Hubert and Tobias) sitting on a couch in their living room while a young girl (Eleanor) marches through the front door, soaked and carrying a large stick.",
+        "alt": "Drawing of two characters (Hubert and Tobias) sitting on a couch in their living room while a young girl (Eleanor) marches through the front door, soaked and carrying a large stick.",
         "tags": [
             "Gallery Only"
         ]
@@ -91,10 +91,66 @@
     },
     {
         "name": "Distribution Map",
-        "src": "/dist-map.png",
-        "alt": "A default distribution map for a species.",
+        "src": "/distMap.png",
+        "alt": "Default distribution map for a species.",
         "tags": [
             "Organic Life"
+        ]
+    },
+    {
+        "name": "Angry Oele' in",
+        "src": "/ehlAngry.png",
+        "alt": "Angry Oele'in (Ehlaunoh) snarling up at the camera with a hand behind its ear.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Dwarf (DnD)",
+        "src": "/illith.png",
+        "alt": "Old male Dwarf (DnD) in ragged clothes with a wand in his belt.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Boss Fight",
+        "src": "/leoDeath.png",
+        "alt": "DnD fight scene showing a Harengon Rogue in a defensive pose across from an armored Warrior Goddess with a sword.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Tobias",
+        "src": "/tobias.png",
+        "alt": "Character collage of a man with tan skin, no arms, a facial wound exposing teeth, and dirty, matted hair.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Eleanor",
+        "src": "/eleanor.png",
+        "alt": "Character sheet for a young girl. She is sunburnt with dirty overalls and messy blonde hair and holds a large stick.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Trouble Sleeping",
+        "src": "/kitchen.png",
+        "alt": "Drawing of a young girl (Eleanor) standing in the kitchen doorway out of sight of a human adult (Maukkohd) washing dishes.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Playful Pals",
+        "src": "/satyrSolid.png",
+        "alt": "Drawing of a fantastical satyr-like creature in a forest with another small creature by its side.",
+        "tags": [
+            "About Me"
         ]
     }
 ]

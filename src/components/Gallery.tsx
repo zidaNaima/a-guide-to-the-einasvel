@@ -24,7 +24,7 @@ const Gallery = () => {
               key={i.src}
               src={i.src}
               alt={i.alt}
-              className="gallery-img size-full aspect-square md:size-24 object-cover cursor-pointer"
+              className="size-full aspect-square md:size-24 object-cover cursor-pointer"
               onClick={() => { handleClick(i) }}
             />
           ))
