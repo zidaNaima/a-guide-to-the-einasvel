@@ -152,5 +152,21 @@
         "tags": [
             "About Me"
         ]
+    },
+    {
+        "name": "A Silly One!",
+        "src": "/entropy.gif",
+        "alt": "Anthropomorphic Valais Blacknose (Left) and colorful scene-core Bat (Right) taking a selfie with silly expressions. Entropy (Right) belongs to @Valkyrie_Victorious on ArtFight.",
+        "tags": [
+            "About Me"
+        ]
+    },
+    {
+        "name": "Target Locked",
+        "src": "/eliRender.png",
+        "alt": "Mermaid with a driftwood bow and sailfish-skull arrow aims at an off-screen target. Echetteria belongs to @0relli on Instagram, @bagagec on ArtFight.",
+        "tags": [
+            "About Me"
+        ]
     }
 ]

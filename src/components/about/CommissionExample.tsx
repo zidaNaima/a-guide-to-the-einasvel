@@ -108,19 +108,21 @@ const CommissionExample = () => {
                     <div className="flex flex-row justify-center gap-2 mb-2">
                         {name === CommissionOptions[0].name &&
                             <>
-                                <FullScreenImg src="/leoDeath.png" alt="DnD fight scene showing a Harengon Rogue in a defensive pose across from an armored Warrior Goddess with a sword." className="size-20 rounded-[8px] border border-font-secondary" />
+                                <FullScreenImg src="/leoDeath.png" alt="DnD fight scene showing a Harengon Rogue in a defensive pose across from an armored Warrior Goddess with a sword." className="size-20 object-cover rounded-[8px] border border-font-secondary" />
                             </>
                         }
 
                         {name === CommissionOptions[1].name &&
                             <>
-                                <FullScreenImg src="/ehlAngry.png" alt="Angry Oele'in (Ehlaunoh) snarling up at the camera with a hand behind its ear." className="size-20 rounded-[8px] border border-font-secondary" />
+                                <FullScreenImg src="/ehlAngry.png" alt="Angry Oele'in (Ehlaunoh) snarling up at the camera with a hand behind its ear." className="size-20 object-cover rounded-[8px] border border-font-secondary" />
                             </>
                         }
 
                         {name === CommissionOptions[2].name &&
                             <>
-                                <FullScreenImg src="/illith.png" alt="Old male Dwarf (DnD) in ragged clothes with a wand in his belt." className="size-20 rounded-[8px] border border-font-secondary" />
+                                <FullScreenImg src="/illith.png" alt="Old male Dwarf (DnD) in ragged clothes with a wand in his belt." className="size-20 object-cover rounded-[8px] border border-font-secondary" />
+                                <FullScreenImg src="/eliRender.png" alt="Mermaid with a driftwood bow and sailfish-skull arrow aims at an off-screen target. Echetteria belongs to @0relli on Instagram, @bagagec on ArtFight." className="size-20 object-cover rounded-[8px] border border-font-secondary" />
+                                <FullScreenImg src="/entropy.gif" alt="Anthropomorphic Valais Blacknose (Left) and colorful scene-core Bat (Right) taking a selfie with silly expressions. Entropy (Right) belongs to @Valkyrie_Victorious on ArtFight." className="size-20 object-cover rounded-[8px] border border-font-secondary" />
                             </>
                         }
                     </div>
