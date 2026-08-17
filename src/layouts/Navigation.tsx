@@ -115,6 +115,20 @@ const Navigation = ({ pathname }: NavigationProps) => {
                     ]
                 },
                 {
+                    name: "Trivia & Fun Facts",
+                    path: "/trivia-and-fun-facts",
+                    sections: [
+                        {
+                            name: "Trivia",
+                            id: "trivia"
+                        },
+                        {
+                            name: "Fun Facts",
+                            id: "fun-facts"
+                        }
+                    ]
+                },
+                {
                     name: "Contact Me",
                     path: "/contact-me",
                 }

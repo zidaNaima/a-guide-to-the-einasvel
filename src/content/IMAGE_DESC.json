@@ -168,5 +168,13 @@
         "tags": [
             "About Me"
         ]
+    },
+    {
+        "name": "Soh-Coffee-Uh",
+        "src": "/sohcoffeeuh.png",
+        "alt": "Photograph of a plate of balsamic vinegar and oil that resembles the shape of the continent Sohq'authuh.",
+        "tags": [
+            "About Me"
+        ]
     }
 ]

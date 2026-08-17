@@ -1,9 +1,10 @@
 type TagProps = {
     content: any;
     color?: string;
+    className?: string;
 }
 
-const Tag = ({ content, color }: TagProps) => {
+const Tag = ({ content, color, className }: TagProps) => {
     let style = "bg-[#EFBD81] text-[#67320B] border-[#67320B]";
 
     if (color == "red" || content == "About Me") {
@@ -21,7 +22,7 @@ const Tag = ({ content, color }: TagProps) => {
     }
 
     return (
-        <div className={`text-sm text-center px-2 py-0.75 rounded-[8px] border-1 tracking-wide ${style}`}>{content}</div>
+        <div className={`text-sm text-center px-2 py-0.75 rounded-[8px] border-1 tracking-wide ${style} ${className}`}>{content}</div>
     )
 }
 

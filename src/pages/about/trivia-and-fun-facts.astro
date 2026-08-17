@@ -1,0 +1,90 @@
+---
+import About from "./index.astro";
+import formattedDate from "../../scripts/last-updated.ts";
+import Trivia from "../../components/about/Trivia";
+---
+
+<About title="Naima" lastUpdate={formattedDate}>
+    <div id="trivia" class="section-header text-font">
+        <p>Trivia</p>
+        <hr />
+        <p class="section-desc">
+            How much have you learned? Let's check and see with this trivia
+            quiz! Good luck, or should I say "soohm /hl/ihmaud eihne ihd
+            dohth"...
+        </p>
+    </div>
+    <div class="mb-20">
+        <Trivia client:load/>
+    </div>
+
+    <div id="fun-facts" class="section-header text-font">
+        <p>Fun Facts</p>
+        <hr />
+    </div>
+    <section class="flex flex-col gap-4 text-font">
+        <div>
+            <p class="text-lg font-bold mb-2">
+                1. The Origins of Island Shapes and Names
+            </p>
+            <img
+                src="/sohcoffeeuh.png"
+                alt="Photograph of a plate of balsamic vinegar and oil that resembles the shape of the continent Sohq'authuh."
+                class="size-50 object-cover float-right"
+            />
+            <div class="flex flex-col gap-1">
+                <p>
+                    Back in July of 2023, I first started working on the design
+                    of the planet Mk&deg;mih' oh, and on one particular day, I
+                    decided to try local coffee shop I hadn't been to yet. La
+                    Fontana Caffe had an item on the menu &ndash; $5.00 Foccacia
+                    Bread with olive oil and balsamic &ndash; that I decided to
+                    try. The food was delicious, and when I saw the remnants of
+                    my meal, I decided two things:
+                </p>
+                <ul class="my-2 pl-4">
+                    <li>1. This would be a super cool shape for a continent</li>
+                    <li>
+                        2. I must remember this meal forever by naming said
+                        continent after it
+                    </li>
+                </ul>
+                <p>
+                    And so, the spill of vinegar and oil became Sohq'authuh,
+                    names after the "Foccacia" bread, and Dau/hl/saumik&deg; (which I
+                    designed based on the foam in my empty mug of coffee) was named after the "Balsamic"
+                    vinegar.
+                </p>
+                <p>Unfortunately, La Fontana Caffee is now closed.</p>
+            </div>
+            <div class="clear-both"></div>
+        </div>
+
+        <div>
+            <p class="text-lg font-bold mb-2">2. Terrible Naming Skills</p>
+            <div class="flex flex-col gap-1">
+                <p>
+                    This section will also answer the question "Why are Einasvel
+                    and Enausq'/hl/ used interchangeably?"
+                </p>
+                <p>
+                    Funny story, because I'm completely terrible at naming
+                    things, I was stuck on what to call this species at first. I
+                    eventually spotted a thing of Vaseline on my desk and
+                    resorted to rearranging the letters until I came up with
+                    Einasvel. After later creating the language and sounds, I
+                    translated it into the closest thing, Enausq'/hl/, which is
+                    why you see those words used interchangeably throughout this
+                    site!
+                </p>
+                <p>
+                    A similar reasoning is used for Mikimoh and Mk&deg;mih' oh,
+                    although in this case, the proper spelling "Mk&deg;mih' oh"
+                    was actually created first, and Mikimoh was only created
+                    after as a way for the planets name to be pronounced easily
+                    using sounds more familiar to humans.
+                </p>
+            </div>
+        </div>
+    </section>
+</About>
