@@ -7,6 +7,22 @@ html {
     color: var(--color-font-secondary);
 }
 
+::-webkit-scrollbar {
+    width: 18px;
+    background-color: var(--color-light-gray);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark-gray);
+    border: 3px solid var(--color-light-gray);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(from var(--color-shadow) r g b / 0.35);
+}
+
 @theme {
     --color-primary: #3A3763;
     --color-secondary: #F7DC51;
@@ -177,6 +193,10 @@ footer a {
 
 .write-vertical {
     writing-mode: sideways-lr;
+}
+
+.galaxy-table p:nth-of-type(odd) {
+    background-color: var(--color-shadow);
 }
 
 .info-table {

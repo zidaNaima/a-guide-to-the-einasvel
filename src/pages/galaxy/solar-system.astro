@@ -1,0 +1,30 @@
+---
+import Galaxy from "./index.astro";
+import formattedDate from "../../scripts/last-updated.ts";
+import SolarSystemDataHalf from "../../components/galaxy/SolarSystemDataHalf";
+---
+
+<Galaxy title="Solar System" lastUpdate={formattedDate}>
+    <div class="section-header text-font">
+        <!-- id goes below instead -->
+        <p>The Solar System</p>
+        <hr />
+    </div>
+
+    <section
+        class="relative bg-shadow flex flex-col text-font h-300 md:h-[90vh] link-on-dark underline-link"
+    >
+        <section
+            class="z-1 md:absolute w-full md:h-full text-center flex flex-col justify-center"
+        >
+        <!-- Solar system circular photo -->
+            <img src="/solarSystem.png" alt="Solar System with planetary bodies of various sizes and spacing." class="aspect-square md:mr-[50%]">
+        </section>
+
+        <section
+            class="z-2 min-h-0 md:w-[50%] md:ml-[50%] p-4 bg-black/25 h-full"
+        >
+            <SolarSystemDataHalf client:load />
+        </section>
+    </section>
+</Galaxy>

@@ -176,5 +176,21 @@
         "tags": [
             "About Me"
         ]
+    },
+    {
+        "name": "Solar System Planetary Bodies",
+        "src": "/solarSystemPlanets.png",
+        "alt": "Twelve main planetary bodies of a solar system shown with various designs and sizes.",
+        "tags": [
+            "Galaxy"
+        ]
+    },
+    {
+        "name": "Solar System",
+        "src": "/solarSystem.png",
+        "alt": "Solar System with planetary bodies of various sizes and spacing.",
+        "tags": [
+            "Galaxy"
+        ]
     }
 ]

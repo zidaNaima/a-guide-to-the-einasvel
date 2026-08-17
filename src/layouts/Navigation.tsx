@@ -31,8 +31,22 @@ const Navigation = ({ pathname }: NavigationProps) => {
             href: "/galaxy",
             pages: [
                 {
+                    name: "Solar System",
+                    path: "/solar-system"
+                },
+                {
                     name: "Mk°mih'oh",
-                    path: "/mk'mih'oh"
+                    path: "/mk'mih'oh",
+                    sections: [
+                        {
+                            name: "Planet Data",
+                            id: "planet-data",
+                        },
+                        {
+                            name: "Calendar",
+                            id: "calendar",
+                        }
+                    ]
                 }
             ]
         },
