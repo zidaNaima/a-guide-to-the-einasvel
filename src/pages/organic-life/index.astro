@@ -1,14 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const { title } = Astro.props;
-import formattedDate from "../../scripts/last-updated.ts";
+const { title, pageLastUpdated } = Astro.props;
 ---
 
-<BaseLayout title={title} lastUpdate={formattedDate}>
+<BaseLayout title={title} pageLastUpdated={pageLastUpdated}>
     <section slot="header" class="w-full max-w-335 m-auto px-12">
         <h1 class="page-title">The Life | Desihm</h1>
         <p class="text-base">
-            Learn about the plants and animals that live on the planet Mk°mih'oh.
+            Learn about the plants and animals that live on the planet
+            Mk°mih'oh.
         </p>
     </section>
 
@@ -16,5 +16,9 @@ import formattedDate from "../../scripts/last-updated.ts";
         <a href="/organic-life/animals">Animals</a>
     </section>
 
-    <slot><div class="text-font text-xl text-center">Select a Tab above to get started!</div></slot>
+    <slot
+        ><div class="text-font text-xl text-center">
+            Select a Tab above to get started!
+        </div></slot
+    >
 </BaseLayout>

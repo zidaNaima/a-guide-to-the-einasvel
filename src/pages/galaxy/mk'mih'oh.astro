@@ -1,49 +1,78 @@
 ---
 import Galaxy from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<Galaxy title="Mk°mih'oh" lastUpdate={formattedDate}>
+<Galaxy title="Mk°mih'oh" pageLastUpdated={pageLastUpdated}>
 	<div class="section-header text-font">
 		<!-- id goes below instead -->
 		<p>The Planet Mk°mih'oh</p>
 		<hr />
 	</div>
 
-	<section class="relative bg-shadow flex flex-col text-font h-300 md:h-[90vh] link-on-dark underline-link">
+	<section
+		class="relative bg-shadow flex flex-col text-font h-300 md:h-[90vh] link-on-dark underline-link"
+	>
 		<div class="z-2 md:w-[50%] md:ml-[50%] p-4 md:bg-black/25">
-			<div class="font-serif text-4xl sm:text-7xl md:text-4xl lg:text-7xl uppercase mb-4 text-center">Mk&deg;mih' oh</div>
+			<div
+				class="font-serif text-4xl sm:text-7xl md:text-4xl lg:text-7xl uppercase mb-4 text-center"
+			>
+				Mk&deg;mih' oh
+			</div>
 		</div>
-		
+
 		<section
 			class="z-1 md:absolute w-full aspect-square md:h-full text-center flex flex-col justify-center"
 		>
 			3D Model goes here
 		</section>
 
-		<section class="z-2 overflow-y-auto md:w-[50%] md:ml-[50%] p-4 bg-black/25">
-
+		<section
+			class="z-2 overflow-y-auto md:w-[50%] md:ml-[50%] p-4 bg-black/25"
+		>
 			<div class="mb-4">
 				<div id="planet-data" class="text-xl font-bold mb-4">
 					<p>Planet Data</p>
 					<hr />
 				</div>
 				<p>
-					<a href="">This is a Link</a> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Inventore adipisci obcaecati quas sit, aut porro, accusamus
-					nihil nobis autem officia quia. Nemo a eius facilis! Unde
-					beatae praesentium, adipisci voluptatibus expedita quis
-					reprehenderit porro vero dolorem blanditiis alias earum,
-					natus et dolorum dolor, hic explicabo sequi exercitationem
-					illo ipsam nam. Ducimus, ipsum tempora expedita tempore sit
-					commodi, libero necessitatibus, veritatis ratione optio
-					reiciendis. At consequatur, autem recusandae et aspernatur
-					possimus ad, sint illo praesentium reiciendis quam iure
-					quae. Beatae omnis repellendus autem? Asperiores
-					reprehenderit, tempore temporibus at optio id iusto tenetur
-					ipsam expedita blanditiis aut, quod corrupti saepe nesciunt
-					sit!
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio temporibus facere minus illo, autem quisquam consequatur harum rem nesciunt laudantium accusamus dignissimos quo officiis aliquam cumque nisi amet praesentium est ab omnis voluptatum necessitatibus? Molestias ipsam totam veniam molestiae odio voluptatem harum cum. Ea eum incidunt omnis magnam. Placeat eum ex voluptate ipsam ullam, sunt voluptas vitae ea minima aspernatur adipisci itaque alias autem vel rerum laboriosam ut ab assumenda optio excepturi odio minus! Aliquid similique corrupti perferendis quam saepe quod voluptatum vero, dolorum explicabo ratione quae et vitae nam eveniet assumenda deserunt nisi quasi temporibus, porro maxime enim cumque, est qui neque? Mollitia ab adipisci officiis itaque necessitatibus quasi laboriosam. Rem aut quo distinctio ducimus corporis quas quidem aperiam veritatis, natus maxime nostrum consequatur recusandae repellat, quaerat ipsam sunt iure? Veniam asperiores nesciunt explicabo atque laudantium doloribus hic, aut provident, pariatur quia ullam dignissimos, aperiam quasi omnis repellat! Perspiciatis numquam sed ab cupiditate adipisci. Laborum provident sunt molestias esse dolor placeat quo atque eum praesentium sint dolorum, quia, aperiam quis, magni harum quisquam cumque necessitatibus. Eaque libero fugit corporis expedita quisquam sequi repellendus doloribus exercitationem eum! Accusamus sed ut odit amet asperiores minus inventore perspiciatis! Quae eveniet a deserunt!
+					<a href="">This is a Link</a> Lorem ipsum, dolor sit amet consectetur
+					adipisicing elit. Inventore adipisci obcaecati quas sit, aut porro,
+					accusamus nihil nobis autem officia quia. Nemo a eius facilis!
+					Unde beatae praesentium, adipisci voluptatibus expedita quis reprehenderit
+					porro vero dolorem blanditiis alias earum, natus et dolorum dolor,
+					hic explicabo sequi exercitationem illo ipsam nam. Ducimus, ipsum
+					tempora expedita tempore sit commodi, libero necessitatibus, veritatis
+					ratione optio reiciendis. At consequatur, autem recusandae et
+					aspernatur possimus ad, sint illo praesentium reiciendis quam
+					iure quae. Beatae omnis repellendus autem? Asperiores reprehenderit,
+					tempore temporibus at optio id iusto tenetur ipsam expedita blanditiis
+					aut, quod corrupti saepe nesciunt sit! Lorem ipsum dolor sit amet
+					consectetur adipisicing elit. Odio temporibus facere minus illo,
+					autem quisquam consequatur harum rem nesciunt laudantium accusamus
+					dignissimos quo officiis aliquam cumque nisi amet praesentium
+					est ab omnis voluptatum necessitatibus? Molestias ipsam totam
+					veniam molestiae odio voluptatem harum cum. Ea eum incidunt omnis
+					magnam. Placeat eum ex voluptate ipsam ullam, sunt voluptas vitae
+					ea minima aspernatur adipisci itaque alias autem vel rerum laboriosam
+					ut ab assumenda optio excepturi odio minus! Aliquid similique
+					corrupti perferendis quam saepe quod voluptatum vero, dolorum
+					explicabo ratione quae et vitae nam eveniet assumenda deserunt
+					nisi quasi temporibus, porro maxime enim cumque, est qui neque?
+					Mollitia ab adipisci officiis itaque necessitatibus quasi laboriosam.
+					Rem aut quo distinctio ducimus corporis quas quidem aperiam veritatis,
+					natus maxime nostrum consequatur recusandae repellat, quaerat
+					ipsam sunt iure? Veniam asperiores nesciunt explicabo atque laudantium
+					doloribus hic, aut provident, pariatur quia ullam dignissimos,
+					aperiam quasi omnis repellat! Perspiciatis numquam sed ab cupiditate
+					adipisci. Laborum provident sunt molestias esse dolor placeat
+					quo atque eum praesentium sint dolorum, quia, aperiam quis, magni
+					harum quisquam cumque necessitatibus. Eaque libero fugit corporis
+					expedita quisquam sequi repellendus doloribus exercitationem eum!
+					Accusamus sed ut odit amet asperiores minus inventore perspiciatis!
+					Quae eveniet a deserunt!
 				</p>
 			</div>
 

@@ -1,10 +1,12 @@
 ---
 import About from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import ContactForm from "../../components/ContactForm";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<About title="Contact Me" lastUpdate={formattedDate}>
+<About title="Contact Me" pageLastUpdated={pageLastUpdated}>
     <div id="contact-me" class="section-header text-font">
         <p>Contact Me</p>
         <hr />

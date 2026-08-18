@@ -1,8 +1,9 @@
 ---
 import "../global.css";
-const { title, lastUpdate } = Astro.props;
 import { ClientRouter } from "astro:transitions";
 import Navigation from "./Navigation";
+const { title, pageLastUpdated } = Astro.props;
+import siteLastUpdated from "../scripts/site-last-updated";
 ---
 
 <script src="../scripts/default-page-tabs.ts"></script>
@@ -73,9 +74,20 @@ import Navigation from "./Navigation";
 			</div>
 
 			<section
-				class="bg-linear-to-b from-primary/85 to-40% to-primary rounded-[10px] pt-12.5 pb-37.5 w-[95%] m-auto max-w-335 px-6.25"
+				class="bg-linear-to-b from-primary/85 to-40% to-primary rounded-[10px] pt-12.5 w-[95%] m-auto max-w-335 px-6.25"
 			>
 				<slot />
+				<!-- <div class="pt-7.5 pb-30 text-font text-xs flex justify-center">
+					<p class="border-t-1 w-min whitespace-nowrap pt-2 px-4">
+						Page Last Updated: {lastUpdate}
+					</p>
+				</div> -->
+				<div class="pb-7.5 pt-30 text-font text-xs">
+					<hr />
+					<p class="w-min whitespace-nowrap p-2">
+						Page Last Updated: {pageLastUpdated || "---"}
+					</p>
+				</div>
 			</section>
 		</main>
 
@@ -131,7 +143,7 @@ import Navigation from "./Navigation";
 				All rights reserved. Do not copy or distribute without
 				permission.
 				<br />
-				Last updated: {lastUpdate}
+				Site Last Updated: {siteLastUpdated}
 			</p>
 		</footer>
 	</body>

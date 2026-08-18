@@ -1,13 +1,15 @@
 ---
 import Language from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import NavigationCard from "../../components/NavigationCard.astro";
 import Phonology from "../../components/language/Phonology.astro";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
 <script src="../../scripts/collapse-section.ts"></script>
 
-<Language title="Naunoh/hl/oh" lastUpdate={formattedDate}>
+<Language title="Naunoh/hl/oh" pageLastUpdated={pageLastUpdated}>
     <div class="flex flex-row-reverse justify-between gap-15">
         <!-- navigation card -->
         <NavigationCard>

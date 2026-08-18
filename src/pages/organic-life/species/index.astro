@@ -1,8 +1,7 @@
 ---
 import Life from "../index.astro";
-import formattedDate from "../../../scripts/last-updated.ts";
-const { title } = Astro.props;
 import SpeciesList from "../../../components/life/SpeciesList";
+const { title, pageLastUpdated } = Astro.props;
 ---
 
 <script>
@@ -15,7 +14,7 @@ import SpeciesList from "../../../components/life/SpeciesList";
     });
 </script>
 
-<Life title={title} lastUpdate={formattedDate}>
+<Life title={title} pageLastUpdated={pageLastUpdated}>
     <button
         id="back-button"
         class="text-font border rounded-full w-fit px-6 py-1 mb-6"
@@ -28,7 +27,9 @@ import SpeciesList from "../../../components/life/SpeciesList";
             <div class="section-header text-font-secondary">
                 <p>Full Species List</p>
                 <hr />
-                <p class="section-desc">Select an animal species below to get started</p>
+                <p class="section-desc">
+                    Select an animal species below to get started
+                </p>
             </div>
             <div class="link-on-light">
                 <SpeciesList client:only />

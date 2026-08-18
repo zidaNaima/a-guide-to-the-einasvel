@@ -1,16 +1,19 @@
 ---
 import Life from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import Phylogenetic from "../../components/life/Phylogenetic";
 import SpeciesList from "../../components/life/SpeciesList";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<Life title="Animals" lastUpdate={formattedDate}>
+<Life title="Animals" pageLastUpdated={pageLastUpdated}>
     <div id="phylogenetic" class="section-header text-font">
         <p>Phylogenetic Tree</p>
         <hr />
         <p class="md:hidden section-desc">
-            NOTE: This section can only be viewed on larger screens. Check out the full list of species below instead!
+            NOTE: This section can only be viewed on larger screens. Check out
+            the full list of species below instead!
         </p>
     </div>
     <div class="mb-20">

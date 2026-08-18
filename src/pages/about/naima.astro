@@ -1,12 +1,14 @@
 ---
 import About from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import CharacterAccordion from "../../components/about/CharacterAccordion";
 import CommissionExample from "../../components/about/CommissionExample";
 import ContactForm from "../../components/ContactForm";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<About title="Naima" lastUpdate={formattedDate}>
+<About title="Naima" pageLastUpdated={pageLastUpdated}>
     <div id="about-the-creator" class="section-header text-font">
         <p>About the Creator</p>
         <hr />
@@ -24,17 +26,19 @@ import ContactForm from "../../components/ContactForm";
         <p>Commission Information</p>
         <hr />
     </div>
-    <div class="flex flex-wrap flex-col md:flex-row xl:grid xl:grid-cols-[1fr_auto_1fr] gap-6">
+    <div
+        class="flex flex-wrap flex-col md:flex-row xl:grid xl:grid-cols-[1fr_auto_1fr] gap-6"
+    >
         <CommissionExample client:load />
 
         <div class="sm:min-w-90 m-auto mt-6 xl:mt-0">
             <ContactForm
-            text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente dolore cumque illum nam?"
-            namePlaceholder="Maukkohd"
-            contactPlaceholder="maukkohd@einasvel.com"
-            messagePlaceholder="De'ih Enausq'/hl/"
-            location="Guide V2 | Commissions"
-            client:load
+                text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente dolore cumque illum nam?"
+                namePlaceholder="Maukkohd"
+                contactPlaceholder="maukkohd@einasvel.com"
+                messagePlaceholder="De'ih Enausq'/hl/"
+                location="Guide V2 | Commissions"
+                client:load
             />
         </div>
     </div>

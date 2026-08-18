@@ -1,10 +1,12 @@
 ---
 import Galaxy from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import SolarSystemDataHalf from "../../components/galaxy/SolarSystemDataHalf";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<Galaxy title="Solar System" lastUpdate={formattedDate}>
+<Galaxy title="Solar System" pageLastUpdated={pageLastUpdated}>
     <div class="section-header text-font">
         <!-- id goes below instead -->
         <p>The Solar System</p>
@@ -17,8 +19,12 @@ import SolarSystemDataHalf from "../../components/galaxy/SolarSystemDataHalf";
         <section
             class="z-1 md:absolute w-full md:h-full text-center flex flex-col justify-center"
         >
-        <!-- Solar system circular photo -->
-            <img src="/solarSystem.png" alt="Solar System with planetary bodies of various sizes and spacing." class="aspect-square md:mr-[50%]">
+            <!-- Solar system circular photo -->
+            <img
+                src="/solarSystem.png"
+                alt="Solar System with planetary bodies of various sizes and spacing."
+                class="aspect-square md:mr-[50%]"
+            />
         </section>
 
         <section

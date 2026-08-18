@@ -4,9 +4,12 @@ import {
     SpeciesBuildCard,
     SpeciesMapCard,
 } from "../../../components/life/SpeciesInfoCards";
+
+import { getLastUpdated } from "../../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<Species title="Ooheihaudeih">
+<Species title="Ooheihaudeih" pageLastUpdated={pageLastUpdated}>
     <div class="section-header text-font-secondary">
         <p>Ooheihaudeih</p>
         <hr />

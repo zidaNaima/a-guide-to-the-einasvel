@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const { title, formattedDate } = Astro.props;
+const { title, pageLastUpdated } = Astro.props;
 ---
 
-<BaseLayout title={title} lastUpdate={formattedDate}>
+<BaseLayout title={title} pageLastUpdated={pageLastUpdated}>
     <section slot="header" class="w-full max-w-335 m-auto px-12">
         <h1 class="page-title">The Stories | E/hl/aunoh</h1>
         <p class="text-base">

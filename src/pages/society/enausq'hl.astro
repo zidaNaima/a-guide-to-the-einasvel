@@ -1,13 +1,15 @@
 ---
 import Society from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import NavigationCard from "../../components/NavigationCard.astro";
 import SelfExpression from "../../components/society/SelfExpression.astro";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
 <script src="../../scripts/collapse-section.ts"></script>
 
-<Society title="Enausq'/hl/" lastUpdate={formattedDate}>
+<Society title="Enausq'/hl/" pageLastUpdated={pageLastUpdated}>
     <div class="flex flex-row-reverse justify-between gap-15">
         <!-- navigation card -->
         <NavigationCard>

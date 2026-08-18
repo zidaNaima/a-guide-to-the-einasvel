@@ -1,10 +1,12 @@
 ---
 import About from "./index.astro";
-import formattedDate from "../../scripts/last-updated.ts";
 import Trivia from "../../components/about/Trivia";
+
+import { getLastUpdated } from "../../scripts/page-last-updated";
+const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
-<About title="Trivia & Fun Facts" lastUpdate={formattedDate}>
+<About title="Trivia & Fun Facts" pageLastUpdated={pageLastUpdated}>
     <div id="trivia" class="section-header text-font">
         <p>Trivia</p>
         <hr />
@@ -15,7 +17,7 @@ import Trivia from "../../components/about/Trivia";
         </p>
     </div>
     <div class="mb-20">
-        <Trivia client:load/>
+        <Trivia client:load />
     </div>
 
     <div id="fun-facts" class="section-header text-font">
@@ -51,9 +53,9 @@ import Trivia from "../../components/about/Trivia";
                 </ul>
                 <p>
                     And so, the spill of vinegar and oil became Sohq'authuh,
-                    names after the "Foccacia" bread, and Dau/hl/saumik&deg; (which I
-                    designed based on the foam in my empty mug of coffee) was named after the "Balsamic"
-                    vinegar.
+                    names after the "Foccacia" bread, and Dau/hl/saumik&deg;
+                    (which I designed based on the foam in my empty mug of
+                    coffee) was named after the "Balsamic" vinegar.
                 </p>
                 <p>Unfortunately, La Fontana Caffee is now closed.</p>
             </div>
