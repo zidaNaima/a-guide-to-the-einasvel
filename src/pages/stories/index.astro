@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const { title, formattedDate } = Astro.props;
+---
+
+<BaseLayout title={title} lastUpdate={formattedDate}>
+    <section slot="header" class="w-full max-w-335 m-auto px-12">
+        <h1 class="page-title">The Stories | E/hl/aunoh</h1>
+        <p class="text-base">
+            Read about how two cultures collide when an Oele'in is stranded far
+            from home, or about how stars can't always be seen from the ground.
+        </p>
+    </section>
+
+    <section slot="tabs">
+        <a href="/stories/nonfiction">Nonfiction</a>
+    </section>
+
+    <slot
+        ><div class="text-font text-xl text-center">
+            Select a Tab above to get started!
+        </div></slot
+    >
+</BaseLayout>

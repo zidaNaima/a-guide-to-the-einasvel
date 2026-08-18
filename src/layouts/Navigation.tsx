@@ -105,6 +105,12 @@ const Navigation = ({ pathname }: NavigationProps) => {
         {
             main: "Stories",
             href: "/stories",
+            pages: [
+                {
+                    name: "Nonfiction",
+                    path: "/nonfiction"
+                }
+            ]
         },
         {
             main: "About Me",

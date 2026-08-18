@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Story One",
+        "desc": "Brief descripton of story one",
+        "src": "/ooheih.png",
+        "alt": "Alternative Text",
+        "chapters": [
+            {
+                "chapterName": "The Beginning",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias pariatur, dolores numquam officiis itaque suscipit eligendi aut eveniet assumenda dolore quod culpa aliquam omnis dolorum maxime, eum similique ad, sed velit nostrum. Quam, fugiat praesentium aspernatur impedit maxime ut? \n\n Optio impedit nihil dolorum ea assumenda aspernatur laboriosam quasi magni enim? Architecto quisquam magnam esse delectus voluptatum laboriosam aliquid aliquam, ipsam dolorum non voluptas vel illo aut. Placeat ratione quas rerum consequuntur cumque quidem ex suscipit omnis nostrum hic, sed, incidunt quia. Excepturi expedita ipsam officiis totam illo eveniet dolore dicta est non. \n\n Molestias dolore ipsam nihil beatae eius? Saepe reiciendis itaque molestiae. Explicabo reprehenderit a quisquam laboriosam fuga voluptates ea esse. At obcaecati eos et eveniet earum praesentium dolor quas ut minima, facere illo sapiente eligendi laudantium? Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            },
+            {
+                "chapterName": "The Middle",
+                "text": "Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            },
+            {
+                "chapterName": "The End",
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde explicabo error repellendus voluptate aperiam alias delectus vel, blanditiis commodi obcaecati? Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            }
+        ]
+    },
+    {
+        "title": "Story Two",
+        "desc": "Brief descripton of story two",
+        "src": "/solarSystem.png",
+        "alt": "Alternative Text",
+        "chapters": [
+            {
+                "chapterName": "The Beginning",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias pariatur, dolores numquam officiis itaque suscipit eligendi aut eveniet assumenda dolore quod culpa aliquam omnis dolorum maxime, eum similique ad, sed velit nostrum. Quam, fugiat praesentium aspernatur impedit maxime ut? Optio impedit nihil dolorum ea assumenda aspernatur laboriosam quasi magni enim? Architecto quisquam magnam esse delectus voluptatum laboriosam aliquid aliquam, ipsam dolorum non voluptas vel illo aut. Placeat ratione quas rerum consequuntur cumque quidem ex suscipit omnis nostrum hic, sed, incidunt quia. Excepturi expedita ipsam officiis totam illo eveniet dolore dicta est non. Molestias dolore ipsam nihil beatae eius? Saepe reiciendis itaque molestiae. Explicabo reprehenderit a quisquam laboriosam fuga voluptates ea esse. At obcaecati eos et eveniet earum praesentium dolor quas ut minima, facere illo sapiente eligendi laudantium? Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            },
+            {
+                "chapterName": "The Middle",
+                "text": "Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            },
+            {
+                "chapterName": "The End",
+                "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde explicabo error repellendus voluptate aperiam alias delectus vel, blanditiis commodi obcaecati? Nostrum quod officia vero dolores, hic quis dolorum animi laboriosam cum dolor ullam excepturi ipsa neque cumque blanditiis explicabo rerum, beatae recusandae quae provident ipsum assumenda doloribus error. Iusto voluptatum obcaecati ipsa distinctio reiciendis quisquam voluptas quod voluptatibus soluta voluptatem delectus libero cumque, quia placeat natus a at nostrum molestias porro eligendi error. Exercitationem consequuntur facilis totam atque, harum facere doloremque nulla rem aliquid assumenda itaque enim ut voluptatibus porro in nemo neque?"
+            }
+        ]
+    }
+]

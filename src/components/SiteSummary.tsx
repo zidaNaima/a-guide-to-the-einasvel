@@ -29,7 +29,7 @@ const SiteSummary = () => {
         },
         {
             page: "Stories",
-            desc: "Read about how two cultures colide whrn an Oele'in is stranded far from home, or about how stars can't always be seen from the ground.",
+            desc: "Read about how two cultures collide when an Oele'in is stranded far from home, or about how stars can't always be seen from the ground.",
             link: "/stories",
             src: "/comic.png"
         },

@@ -1,0 +1,15 @@
+---
+import Stories from "./index.astro";
+import formattedDate from "../../scripts/last-updated.ts";
+import StorySection from "../../components/stories/StorySection";
+---
+
+<Stories title="Nonfiction" lastUpdate={formattedDate}>
+    <div id="stories" class="section-header text-font">
+		<p>Stories</p>
+		<hr />
+        <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione tempora laborum rem explicabo voluptates corrupti consectetur quibusdam, eius omnis perspiciatis!</p>
+	</div>
+
+    <StorySection client:only />
+</Stories>
