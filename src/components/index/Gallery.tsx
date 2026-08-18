@@ -1,6 +1,6 @@
 import { useState } from "react";
-import IMAGE_DESC from "../content/IMAGE_DESC.json";
-import Tag from "./Tag";
+import IMAGE_DESC from "../../content/IMAGE_DESC.json";
+import Tag from "../Tag";
 
 const Gallery = () => {
   const [name, setName] = useState(IMAGE_DESC[0].name);
