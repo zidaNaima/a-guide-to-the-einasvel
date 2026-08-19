@@ -3,9 +3,9 @@ import Species from "./index.astro";
 import {
     SpeciesBuildCard,
     SpeciesMapCard,
-} from "../../../components/life/SpeciesInfoCards";
+} from "../../../../components/life/SpeciesInfoCards";
 
-import { getLastUpdated } from "../../../scripts/page-last-updated";
+import { getLastUpdated } from "../../../../scripts/page-last-updated";
 const pageLastUpdated = getLastUpdated(import.meta.url);
 ---
 
@@ -38,16 +38,18 @@ const pageLastUpdated = getLastUpdated(import.meta.url);
             text="In and around densely forested areas"
             client:load
         />
+        <!-- to pass in a link like the StorySection page does, this file will need to be a .tsx file -->
 
         <div class="flex flex-col gap-3">
             <p>
                 <span class="font-bold text-lg block">Reputation</span>
-                They are herded by some, but because they are still dangerous, it
-                is not extremely common. Killing them is slightly looked down on due
-                to the resemblance, but their fur is the best source of hair extentions.
-                If you do kill one, their horns make wonderful weapons in combat,
-                although horned combat is difficult to learn, and doing the needed
-                alterations to the horns is not a common skill.
+                <a href="">This is a link</a> They are herded by some, but because
+                they are still dangerous, it is not extremely common. Killing them
+                is slightly looked down on due to the resemblance, but their fur is
+                the best source of hair extentions. If you do kill one, their horns
+                make wonderful weapons in combat, although horned combat is difficult
+                to learn, and doing the needed alterations to the horns is not a common
+                skill.
             </p>
             <p>
                 The front of their faces are covered in a hard plate, where

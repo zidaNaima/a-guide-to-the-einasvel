@@ -1,6 +1,6 @@
 ---
-import Life from "../index.astro";
-import SpeciesList from "../../../components/life/SpeciesList";
+import Animals from "../index.astro";
+import SpeciesList from "../../../../components/life/SpeciesList";
 const { title, pageLastUpdated } = Astro.props;
 ---
 
@@ -14,7 +14,7 @@ const { title, pageLastUpdated } = Astro.props;
     });
 </script>
 
-<Life title={title} pageLastUpdated={pageLastUpdated}>
+<Animals title={title} pageLastUpdated={pageLastUpdated}>
     <button
         id="back-button"
         class="text-font border rounded-full w-fit px-6 py-1 mb-6"
@@ -22,7 +22,7 @@ const { title, pageLastUpdated } = Astro.props;
         &larr; Go Back
     </button>
 
-    <div class="bg-off-white w-full h-fit p-6">
+    <div class="bg-off-white w-full h-fit p-6 link-on-light underline-link">
         <slot>
             <div class="section-header text-font-secondary">
                 <p>Full Species List</p>
@@ -31,9 +31,7 @@ const { title, pageLastUpdated } = Astro.props;
                     Select an animal species below to get started
                 </p>
             </div>
-            <div class="link-on-light">
-                <SpeciesList client:only />
-            </div>
+            <SpeciesList client:only />
         </slot>
     </div>
-</Life>
+</Animals>

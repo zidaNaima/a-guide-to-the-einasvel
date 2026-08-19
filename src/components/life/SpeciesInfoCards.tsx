@@ -30,7 +30,7 @@ export const SpeciesBuildCard = ({ src, alt, size, weight, lifespan, habitat }: 
 interface MapCardProps {
     src: string,
     alt: string,
-    text?: string,
+    text?: any,
 }
 
 export const SpeciesMapCard = ({ src, alt, text }: MapCardProps) => {
