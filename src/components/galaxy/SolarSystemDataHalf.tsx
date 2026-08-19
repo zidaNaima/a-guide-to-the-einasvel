@@ -18,7 +18,7 @@ const SolarSystemDataHalf = () => {
 
     const PlanetSelector = ({ planet, size, position }: planetSelectorProps) => {
         return (
-            <button onClick={() => handleClick(planet)} className={`bg-red-100/50 absolute rounded-full cursor-pointer aspect-square ${size} ${position} ${activePlanet === planet && "border-3 border-font"}`} />
+            <button onClick={() => handleClick(planet)} className={`bg-red-100/50 absolute rounded-full cursor-pointer aspect-square ${size} ${position} ${activePlanet === planet && "border-3 border-font"} hover:shadow-[0_0_15px_0_rgba(253,248,241,1)]`} />
         )
     }
 
@@ -26,8 +26,8 @@ const SolarSystemDataHalf = () => {
         <>
             {/* buttons that overlay solar system image to the left */}
             <div className="absolute aspect-square left-0 top-0 md:bottom-0 w-full md:w-[50%] md:my-auto bg-red-100/10">
-                <PlanetSelector planet="Hot Jupiter" size="w-[6%]" position="left-[54.5%] mt-[57%] md:left-[57%] md:mt-[52%]" />
-                <PlanetSelector planet="Gas Giant One" size="w-[13%]" position="left-[21%] mt-[68.5%] md:left-[23%] md:mt-[62%]" />
+                <PlanetSelector planet="Hot Jupiter" size="w-[6%]" position="left-[57%] mt-[52%] md:left-[57%] md:mt-[52%]" />
+                <PlanetSelector planet="Gas Giant One" size="w-[13%]" position="left-[23.5%] mt-[63%] md:left-[23%] md:mt-[62.5%]" />
             </div>
 
             <div className="flex flex-col h-full">

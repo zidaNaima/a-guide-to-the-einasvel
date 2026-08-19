@@ -21,16 +21,16 @@ const StorySection = () => {
 
     const ChapterBtnPrev = () => {
         return (
-            <button onClick={() => setChapter(chapter - 1)} className={`w-45 cursor-pointer ${chapter > 0 ? "hover:font-bold" : "pointer-events-none"}`}>
-                <Tag content={<><span className="text-lg leading-0 mr-1">&larr;</span> Previous Chapter</>} color="gray" className={`${chapter <= 0 && "bg-light-gray/50 text-shadow/80"}`} />
+            <button onClick={() => setChapter(chapter - 1)} className={`w-40 sm:w-45 cursor-pointer ${chapter > 0 ? "hover:font-bold" : "pointer-events-none"}`}>
+                <Tag content={<><span className="text-lg leading-0 mr-1">&larr;</span> Previous Chapter</>} color="gray" className={`text-xs sm:text-sm ${chapter <= 0 && "bg-light-gray/50 text-font-secondary/80 border-font-secondary/80"}`} />
             </button>
         )
     }
 
     const ChapterBtnNext = () => {
         return (
-            <button onClick={() => setChapter(chapter + 1)} className={`w-45 cursor-pointer ${chapter < activeStory.chapters.length - 1 ? "hover:font-bold" : "pointer-events-none"}`}>
-                <Tag content={<>Next Chapter <span className="text-lg leading-0 ml-1">&rarr;</span></>} color="gray" className={`${chapter >= activeStory.chapters.length - 1 && "bg-light-gray/50 text-shadow/80"}`} />
+            <button onClick={() => setChapter(chapter + 1)} className={`w-40 sm:w-45 cursor-pointer ${chapter < activeStory.chapters.length - 1 ? "hover:font-bold" : "pointer-events-none"}`}>
+                <Tag content={<>Next Chapter <span className="text-lg leading-0 ml-1">&rarr;</span></>} color="gray" className={`text-xs sm:text-sm ${chapter >= activeStory.chapters.length - 1 && "bg-light-gray/50 text-font-secondary/80 border-font-secondary/80"}`} />
             </button>
         )
     }
@@ -39,8 +39,8 @@ const StorySection = () => {
         return (
             <div className="relative">
 
-                <button onClick={() => setIsIndexOpen(!isIndexOpen)} className="w-45 cursor-pointer hover:font-bold">
-                    <Tag content="Chapter Index" color="gray" className={`${isIndexOpen && "border-b-off-white rounded-b-none"}`} />
+                <button onClick={() => setIsIndexOpen(!isIndexOpen)} className="w-40 sm:w-45 cursor-pointer hover:font-bold">
+                    <Tag content="Chapter Index" color="gray" className={`text-xs sm:text-sm ${isIndexOpen && "border-b-off-white rounded-b-none"}`} />
                 </button>
 
                 {isIndexOpen &&
@@ -62,16 +62,16 @@ const StorySection = () => {
             <div className="lg:flex gap-20">
 
                 <div className="flex gap-4 lg:flex-col justify-between lg:justify-start">
-                    <ul className="bg-off-white px-2 pt-4 pb-8 w-full lg:min-w-70 lg:w-70 h-min">
+                    <ul className="bg-light-gray px-2 pt-4 pb-8 w-full lg:min-w-70 lg:w-70 h-min">
                         {STORIES.map(s =>
                             <li key={s.title} className={`cursor-pointer p-2 ${activeStory.title === s.title ? "border shadow-md" : "m-0.25"}`} onClick={() => handleStoryChange(s)}>
                                 <p className="font-bold">{s.title}</p>
-                                <p className="ml-4">{s.desc}</p>
+                                <p className="ml-4 text-sm">{s.desc}</p>
                             </li>
                         )}
                     </ul>
 
-                    <div className="size-45 hidden sm:flex lg:h-auto">
+                    <div className="size-45 lg:h-auto lg:w-auto hidden sm:flex">
                         <img src={activeStory.src} alt={activeStory.alt} className="h-full w-full object-contain" />
                     </div>
                 </div>

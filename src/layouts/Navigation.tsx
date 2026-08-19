@@ -205,7 +205,7 @@ const Navigation = ({ pathname }: NavigationProps) => {
                                         />
                                     }
 
-                                    <ul id={`${r.main.replace(" ", "-")}`}>
+                                    <ul id={`${r.main.replace(" ", "-")}`} className="sub-nav">
                                         {r.pages &&
                                             r.pages.map(p => (
                                                 <li key={p.name} className="md:mt-2">

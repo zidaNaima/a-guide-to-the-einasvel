@@ -22,7 +22,7 @@ const Tag = ({ content, color, className }: TagProps) => {
     }
 
     return (
-        <div className={`text-sm text-center px-2 py-0.75 rounded-[8px] border-1 tracking-wide ${style} ${className}`}>{content}</div>
+        <div className={`${className} text-sm text-center px-2 py-0.75 rounded-[8px] border-1 tracking-wide ${style}`}>{content}</div>
     )
 }
 

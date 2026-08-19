@@ -13,7 +13,7 @@ import siteLastUpdated from "../scripts/site-last-updated";
 		const tabs = document.querySelectorAll("#tabs-section a");
 		tabs.forEach(
 			(tab) =>
-				tab.getAttribute("href") === location.pathname &&
+				location.pathname.includes(tab.getAttribute("href") || "null") &&
 				tab.classList.add("active"),
 		);
 
@@ -77,11 +77,6 @@ import siteLastUpdated from "../scripts/site-last-updated";
 				class="bg-linear-to-b from-primary/85 to-40% to-primary rounded-[10px] pt-12.5 w-[95%] m-auto max-w-335 px-6.25"
 			>
 				<slot />
-				<!-- <div class="pt-7.5 pb-30 text-font text-xs flex justify-center">
-					<p class="border-t-1 w-min whitespace-nowrap pt-2 px-4">
-						Page Last Updated: {lastUpdate}
-					</p>
-				</div> -->
 				<div class="pb-7.5 pt-30 text-font text-xs">
 					<hr />
 					<p class="w-min whitespace-nowrap p-2">

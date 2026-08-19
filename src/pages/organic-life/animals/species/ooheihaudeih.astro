@@ -21,8 +21,7 @@ const pageLastUpdated = getLastUpdated(import.meta.url);
         </p>
     </div>
 
-    <!-- change lg:block to sm:block if only one card used -->
-    <section class="flex flex-wrap lg:block">
+    <section>
         <SpeciesBuildCard
             src="/ooheih.png"
             alt="Blue creature with a mouse-like body, two red tails, and large black horns."
@@ -40,25 +39,22 @@ const pageLastUpdated = getLastUpdated(import.meta.url);
         />
         <!-- to pass in a link like the StorySection page does, this file will need to be a .tsx file -->
 
-        <div class="flex flex-col gap-3">
-            <p>
-                <span class="font-bold text-lg block">Reputation</span>
-                <a href="">This is a link</a> They are herded by some, but because
-                they are still dangerous, it is not extremely common. Killing them
-                is slightly looked down on due to the resemblance, but their fur is
-                the best source of hair extentions. If you do kill one, their horns
-                make wonderful weapons in combat, although horned combat is difficult
-                to learn, and doing the needed alterations to the horns is not a common
-                skill.
-            </p>
-            <p>
-                The front of their faces are covered in a hard plate, where
-                their noses lies attached at the bottom. They can drink water
-                through their nose, but can't move this plate, so they have a
-                long tongue to pick up food. They have four eyes, two to the
-                sides and two at the front
-            </p>
-        </div>
+        <p class="font-bold text-lg block mb-2">Reputation</p>
+        <p class="mb-2">
+            <a href="">This is a link</a> They are herded by some, but because they
+            are still dangerous, it is not extremely common. Killing them is slightly
+            looked down on due to the resemblance, but their fur is the best source
+            of hair extentions. If you do kill one, their horns make wonderful weapons
+            in combat, although horned combat is difficult to learn, and doing the
+            needed alterations to the horns is not a common skill.
+        </p>
+        <p>
+            The front of their faces are covered in a hard plate, where their
+            noses lies attached at the bottom. They can drink water through
+            their nose, but can't move this plate, so they have a long tongue to
+            pick up food. They have four eyes, two to the sides and two at the
+            front
+        </p>
 
         <div class="clear-both"></div>
     </section>

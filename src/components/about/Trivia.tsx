@@ -71,7 +71,7 @@ const Trivia = () => {
                                         <Tag
                                             content={o.text}
                                             color={i % 2 === 0 ? "blue" : "teal"}
-                                            className={`${!isAnswered && "cursor-pointer hover:font-bold"} ${isAnswered && o.isAnswer ? "!border-[#80CB46] !bg-[#E9F6DF] !text-[#39601A]" : choice === o && "!border-[#67320B] !bg-[#F5B7A6] !text-[#67320B]"}`}
+                                            className={`${!isAnswered && "cursor-pointer hover:font-bold"} ${isAnswered && o.isAnswer ? "border-[#80CB46] bg-[#E9F6DF] text-[#39601A]" : choice === o && "border-[#67320B] bg-[#F5B7A6] text-[#67320B]"}`}
                                         />
                                     </button>
                                 )}
