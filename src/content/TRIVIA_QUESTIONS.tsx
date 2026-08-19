@@ -1,6 +1,7 @@
-[
+const TRIVIA_QUESTIONS = [
     {
         "question": "What makes the plants on Mikimoh a deep orange color?",
+        "hint": <>See the page on <a href=''>Mikimoh</a></>,
         "options": [
             {
                 "text": "It's always Fall",
@@ -15,6 +16,7 @@
     },
     {
         "question": "What is the name of the Hot Jupiter planet? The closest planet to the Sun.",
+        "hint": "It's not Jupiter",
         "options": [
             {
                 "text": "Option A",
@@ -37,6 +39,7 @@
     },
     {
         "question": "Which of these animals is NOT a predator of the Enausq/hl/?",
+        "hint": "They're not cannibals",
         "options": [
             {
                 "text": "Option A",
@@ -58,3 +61,5 @@
         "fact": "It must B option B!"
     }
 ]
+
+export default TRIVIA_QUESTIONS
