@@ -4,11 +4,22 @@ import { ClientRouter } from "astro:transitions";
 import Navigation from "./Navigation";
 const { title, pageLastUpdated } = Astro.props;
 import siteLastUpdated from "../scripts/site-last-updated";
+import Settings from "../components/Settings";
 ---
 
 <script src="../scripts/default-page-tabs.ts"></script>
 <script>
 	document.addEventListener("astro:page-load", () => {
+		// set theme
+		const theme = localStorage.getItem('theme') || 'default';
+		document.documentElement.setAttribute('data-theme', theme);
+		localStorage.setItem('theme', theme);
+
+		// set font size
+		const fontSize = localStorage.getItem('font-size') || 'default';
+		document.documentElement.setAttribute('data-font-size', fontSize);
+		localStorage.setItem('data-font-size', fontSize);
+
 		// set active tab styling
 		const tabs = document.querySelectorAll("#tabs-section a");
 		tabs.forEach(
@@ -58,12 +69,15 @@ import siteLastUpdated from "../scripts/site-last-updated";
 		<a href="#top" id="jump-to-top" class="z-200">Jump To Top</a>
 
 		<header
-			class="h-13 w-full mb-8 bg-secondary content-center shadow-md shadow-primary/20 fixed md:relative z-100"
+			class="flex justify-between h-13 w-full mb-8 bg-secondary fixed md:relative z-100"
 		>
+		<div class="content-center w-full">
 			<Navigation
-				pathname={Astro.url.pathname.split("/")[1]}
-				client:load
+			pathname={Astro.url.pathname.split("/")[1]}
+			client:load
 			/>
+		</div>
+		<Settings client:load />
 		</header>
 
 		<slot name="header" />
@@ -74,7 +88,8 @@ import siteLastUpdated from "../scripts/site-last-updated";
 			</div>
 
 			<section
-				class="bg-linear-to-b from-primary/85 to-40% to-primary rounded-[10px] pt-12.5 w-[95%] m-auto max-w-335 px-6.25"
+				id="main-content"
+				class="rounded-[10px] pt-12.5 w-[95%] m-auto max-w-335 px-6.25"
 			>
 				<slot />
 				<div class="pb-7.5 pt-30 text-font text-xs">
@@ -87,7 +102,7 @@ import siteLastUpdated from "../scripts/site-last-updated";
 		</main>
 
 		<footer
-			class="bg-secondary shadow-[0_-4px_6px_-1px] shadow-primary/20 px-15 md:px-25 pt-16 pb-8"
+			class="bg-secondary px-15 md:px-25 pt-16 pb-8"
 		>
 			<section
 				class="flex flex-col md:flex-row justify-between text-sm mb-8 gap-10 max-w-250 m-auto"

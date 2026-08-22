@@ -10,16 +10,18 @@ const pageLastUpdated = getLastUpdated(import.meta.url);
 <BaseLayout pageLastUpdated={pageLastUpdated}>
 	<section
 		slot="header"
-		class="w-full max-w-220 m-auto h-200 mt-33 text-center px-10 md:px-20"
+		class="w-full max-w-220 m-auto h-200 mt-27 text-center"
 	>
-		<h1 class="text-4xl md:text-6xl font-bold mb-2">
+	<div id="index-header" class="pb-8">
+		<h1 class="text-4xl md:text-6xl font-bold py-6 px-10 md:px-20">
 			A Guide to the Einasvel
 		</h1>
-		<p class="text-lg md:text-xl mb-3">
+		<p class="text-lg md:text-xl mb-3 py-2 px-10 md:px-20">
 			Welcome to the planet Mk°mih'oh! This site hosts the collective
 			information on my world and its inhabitants, spanning all the way
 			back to its creation in November 2022.
 		</p>
+	</div>
 	</section>
 
 	<div id="site-summary" class="section-header text-font">

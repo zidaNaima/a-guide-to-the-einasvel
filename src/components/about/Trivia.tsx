@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Tag from "../Tag";
 import TRIVIA_QUESTIONS from "../../content/TRIVIA_QUESTIONS";
 
@@ -28,6 +28,12 @@ const Trivia = () => {
     const [gameOver, setGameOver] = useState(false);
     const [scorePerc, setScorePerc] = useState(0);
     const [result, setResult] = useState(resultOptions[3]); // default set to "bad"
+
+    const [currTheme, setCurrTheme] = useState<string | null>(null);
+    useEffect(() => {
+        const initTheme = localStorage.getItem('theme') || 'default';
+        setCurrTheme(initTheme);
+    }, []);
 
     const handleAnswer = (opt: any) => {
         if (opt.isAnswer) {
@@ -83,8 +89,8 @@ const Trivia = () => {
                                     <button key={o.text} onClick={() => handleAnswer(o)} className={`${isAnswered && "pointer-events-none"}`}>
                                         <Tag
                                             content={o.text}
-                                            color={i % 2 === 0 ? "blue" : "teal"}
-                                            className={`${!isAnswered && "cursor-pointer hover:font-bold"} ${isAnswered && o.isAnswer ? "border-[#80CB46] bg-[#E9F6DF] text-[#39601A]" : choice === o && "border-[#67320B] bg-[#F5B7A6] text-[#67320B]"}`}
+                                            color={currTheme === "throwback" ? "gray" : (i % 2 === 0 ? "blue" : "teal")}
+                                            className={`${!isAnswered && "cursor-pointer hover:font-bold"} ${isAnswered && o.isAnswer ? "!border-[#80CB46] !bg-tag-green-bg !text-tag-green-text" : choice === o && "!border-tag-red-text !bg-tag-red-bg !text-tag-red-text"}`}
                                         />
                                     </button>
                                 )}
@@ -94,7 +100,7 @@ const Trivia = () => {
                                 <div>
                                     <p className="mb-2">{question.fact}</p>
                                     <button
-                                        className="w-full py-2 px-3 rounded-[20px] border bg-font-secondary text-font text-center uppercase cursor-pointer"
+                                        className="w-full py-2 px-3 rounded-[20px] border bg-font-secondary text-off-white text-center uppercase cursor-pointer"
                                         onClick={handleContinue}
                                     >
                                         Next <span className="text-xl">&rarr;</span>

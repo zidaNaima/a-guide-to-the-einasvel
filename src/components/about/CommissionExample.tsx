@@ -80,7 +80,7 @@ const CommissionExample = () => {
                                 className="absolute top-0 -mt-20 size-40 object-cover cursor-pointer z-0"
                             />
 
-                            <div className={`flex justify-end p-2 absolute top-0 right-0 h-full border ${o.name === name ? "w-70 gap-12 bg-[#E9F6DF] border-2 border-[#80CB46]" : "w-60 gap-6 bg-off-white border-font-secondary"} items-center rounded-full transition-all z-1`}>
+                            <div className={`flex justify-end p-2 absolute top-0 right-0 h-full border ${o.name === name ? "w-70 gap-12 bg-tag-green-bg border-2 border-[#80CB46]" : "w-60 gap-6 bg-off-white border-font-secondary"} items-center rounded-full transition-all z-1`}>
                                 <div className="text-lg">
                                     <p>{o.name} &bull; <span className="font-bold">{o.price}</span></p>
                                 </div>

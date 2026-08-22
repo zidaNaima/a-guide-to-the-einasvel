@@ -61,7 +61,7 @@ const ContactForm = ({ text, location, namePlaceholder, contactPlaceholder, mess
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col self-end text-sm p-6 bg-off-white rounded-[8px]">
+        <form ref={form} onSubmit={sendEmail} className="contact-form flex flex-col self-end text-sm p-6 rounded-[8px]">
             {text && <p className="mb-6">{text}</p>}
             <input
                 type="text"
@@ -75,7 +75,7 @@ const ContactForm = ({ text, location, namePlaceholder, contactPlaceholder, mess
                 name="name"
                 id="form-name"
                 autoComplete="++++++"
-                className="py-2 px-3 w-full bg-white rounded-[8px] border mt-2 mb-6"
+                className="py-2 px-3 w-full rounded-[8px] border mt-2 mb-6"
             />
             <label htmlFor="form-contact">Contact*</label>
             <input
@@ -84,20 +84,20 @@ const ContactForm = ({ text, location, namePlaceholder, contactPlaceholder, mess
                 name="contact"
                 id="form-contact"
                 autoComplete="email tel"
-                className="py-2 px-3 w-full bg-white rounded-[8px] border mt-2 mb-6"
+                className="py-2 px-3 w-full rounded-[8px] border mt-2 mb-6"
             />
             <label htmlFor="form-message">Message*</label>
             <textarea
                 placeholder={messagePlaceholder}
                 name="message"
                 id="form-message"
-                className="py-2 px-3 w-full h-20 bg-white rounded-[8px] border resize-none mt-2 mb-6"
+                className="py-2 px-3 w-full h-20 rounded-[8px] border resize-none mt-2 mb-6"
             >
             </textarea>
             <input
                 type="submit"
                 value="send"
-                className="w-full py-2 px-3 rounded-[20px] border bg-font-secondary text-font uppercase"
+                className="w-full py-2 px-3 rounded-[20px] border uppercase"
             />
         </form>
     );

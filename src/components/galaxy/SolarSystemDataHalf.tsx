@@ -18,7 +18,7 @@ const SolarSystemDataHalf = () => {
 
     const PlanetSelector = ({ planet, size, position }: planetSelectorProps) => {
         return (
-            <button onClick={() => handleClick(planet)} className={`bg-red-100/50 absolute rounded-full cursor-pointer aspect-square ${size} ${position} ${activePlanet === planet && "border-3 border-font"} hover:shadow-[0_0_15px_0_rgba(253,248,241,1)]`} />
+            <button onClick={() => handleClick(planet)} className={`bg-red-100/50 absolute rounded-full cursor-pointer aspect-square ${size} ${position} ${activePlanet === planet && "border-3 border-off-white"} hover:shadow-[0_0_15px_0_rgba(253,248,241,1)]`} />
         )
     }
 
